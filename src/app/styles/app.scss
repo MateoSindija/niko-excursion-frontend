@@ -1,0 +1,19 @@
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'base/typography';
+@import '@/app/components/Navbar/navbar';
+@import '@/app/components/Footer/footer';
+@import '@/app/components/Buttons/sociaMediaButton';
+@import '@/app/components/Buttons/languageButton';
+@import '@/app/components/Buttons/carouselControllerButton';
+@import '@/app/components/Carousels/PromoCarousel/promoCarousel';
+@import '@/app/components/Containers/frontPageCotainer';
+@import '@/app/components/Modals/imageModal';
+@import '@/app/components/Gallery/gallery';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}

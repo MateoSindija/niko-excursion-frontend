@@ -1,0 +1,23 @@
+.gallery {
+  &__top,
+  &__bottom {
+    overflow: hidden;
+  }
+  &__top {
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    height: 320px;
+    backface-visibility: hidden;
+    display: flex;
+    touch-action: pan-y;
+    margin-left: -1rem;
+  }
+
+  &__slide {
+    flex: 0 0 auto;
+    padding-left: 1rem;
+    position: relative;
+  }
+}

@@ -1,0 +1,42 @@
+@mixin orange-hover {
+  cursor: pointer;
+  &:hover {
+    color: $orange-color !important;
+  }
+}
+
+@mixin generic-shadow() {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+@mixin ripple-effect($background-color) {
+  background-position: center;
+  transition: background 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($background-color, 10%)
+      radial-gradient(circle, transparent 1%, darken($background-color, 10%) 1%)
+      center/15000%;
+  }
+
+  &:active {
+    background-color: $background-color;
+    background-size: 100%;
+    transition: background 0s;
+  }
+}
+
+@mixin zoom-in($scale: 150%, $duration: 7s) {
+  animation: zoom-in $duration ease-in-out;
+  animation-fill-mode: forwards;
+
+  @keyframes zoom-in {
+    0% {
+      scale: 100%;
+    }
+    100% {
+      scale: $scale;
+    }
+  }
+}

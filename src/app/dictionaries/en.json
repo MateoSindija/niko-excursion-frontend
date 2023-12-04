@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "tours": "Excursions"
+  },
+  "footer": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla pharetra tellus, bibendum consequat urna bibendum ac. Pellentesque lobortis tellus in ipsum bibendum, fermentum ultricies enim suscipit",
+    "overview": "Overview",
+    "getInTouch": "Get in touch"
+  }
+}

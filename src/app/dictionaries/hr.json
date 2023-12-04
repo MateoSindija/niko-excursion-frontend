@@ -1,0 +1,14 @@
+{
+  "navigation": {
+    "home": "Naslovna",
+    "aboutUs": "O nama",
+    "contact": "Kontakt",
+    "tours": "Ekskurzije"
+  },
+
+  "footer": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla pharetra tellus, bibendum consequat urna bibendum ac. Pellentesque lobortis tellus in ipsum bibendum, fermentum ultricies enim suscipit",
+    "overview": "Pregled",
+    "getInTouch": "Kontaktirajte nas"
+  }
+}

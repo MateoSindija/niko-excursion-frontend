@@ -1,0 +1,16 @@
+.carouselButton--white {
+  @include ripple-effect(white);
+  border: none;
+}
+
+.carouselButton--transparent {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #acb7c6;
+}
+
+.carouselButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,2 @@
+export const MOBILE_NAVBAR_BREAKPOINT = 700;
+export const TABLET_NAVBAR_BREAKPOINT = 930;

@@ -1,0 +1,52 @@
+.langContainer {
+  position: relative;
+  height: 40px;
+  &__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    clip-path: circle(50%);
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
+
+  &__selector {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+    border-radius: 6px;
+    padding: 10px 0;
+    @include generic-shadow();
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -13px;
+      left: 12px;
+      z-index: 10;
+      border: solid 9px transparent;
+      border-right-color: #fff;
+      rotate: 90deg;
+    }
+
+    &__option {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+      padding: 5px;
+      @include ripple-effect(white);
+      text-decoration: none !important;
+      color: black;
+
+      &__image {
+        margin-right: 10px;
+      }
+    }
+  }
+}

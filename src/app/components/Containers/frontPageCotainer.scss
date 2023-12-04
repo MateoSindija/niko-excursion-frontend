@@ -1,0 +1,28 @@
+.wrapper {
+  width: 100%;
+  min-height: 100px;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(20px, 10%, 40px) 20px;
+    text-align: center;
+
+    &__title {
+      text-transform: uppercase;
+      font-size: toRem(25);
+      margin-bottom: 14px;
+
+      &__first {
+        font-family: 'Playfair Display', sans-serif !important;
+      }
+
+      &__last {
+        font-family: 'Playfair Display', sans-serif !important;
+        font-weight: 600;
+      }
+    }
+  }
+}
