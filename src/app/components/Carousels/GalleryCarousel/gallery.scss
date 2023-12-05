@@ -1,4 +1,5 @@
 .gallery {
+  padding-bottom: 40px;
   &__top,
   &__bottom {
     overflow: hidden;
@@ -19,5 +20,11 @@
     flex: 0 0 auto;
     padding-left: 1rem;
     position: relative;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery__slide {
+    flex: 0 0 100%;
   }
 }

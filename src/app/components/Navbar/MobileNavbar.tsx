@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import LinkList from '@/app/components/Navbar/LinkList';
 import { usePathname } from 'next/navigation';
@@ -7,6 +7,7 @@ import handleLangChange from '@/app/utils/handleLangChange';
 import { i18n } from 'i18n.config';
 import Link from 'next/link';
 import Logo from '@/app/components/Logo/Logo';
+import { useDisableBodyScroll } from '@/app/hooks/useDisableBodyScroll';
 
 const EXIT_BUTTON_SIZE = 15;
 const SMALL_FLAG_SIZE = 17;
@@ -20,6 +21,8 @@ const MobileNavbar = ({ lang }: IProps) => {
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const [isDashboardOpen, setIsDashboardOpen] = useState(false);
   const pathname = usePathname();
+
+  useDisableBodyScroll(isDashboardOpen);
 
   return (
     <div className="navbar mobileNavbar">

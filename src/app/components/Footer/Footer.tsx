@@ -2,9 +2,9 @@ import React from 'react';
 import Logo from '@/app/components/Logo/Logo';
 import LinkList from '@/app/components/Navbar/LinkList';
 import SocialMediaButton from '@/app/components/Buttons/SocialMediaButton';
-import Phone from '@/app/utils/vectors/Phone';
-import Mail from '@/app/utils/vectors/Mail';
-import Location from '@/app/utils/vectors/Location';
+import PhoneIcon from '@/app/utils/vectors/PhoneIcon';
+import MailIcon from '@/app/utils/vectors/MailIcon';
+import LocationIcon from '@/app/utils/vectors/LocationIcon';
 import Image from 'next/image';
 import { EMAIL, LOCATION, PHONE_NUMBER } from '@/app/constants/contact';
 import ImageModal from '@/app/components/Modals/ImageModal';
@@ -28,15 +28,15 @@ const Footer = async ({ lang, footerDictionary }: IProps) => {
       <div className="footer__col col--md">
         <div className="footer__col__title">{footerDictionary?.getInTouch}</div>
         <div className="footer__col__row">
-          <Location />
+          <LocationIcon />
           <span className="footer__col__row__text">{LOCATION}</span>
         </div>
         <div className="footer__col__row">
-          <Phone />
+          <PhoneIcon />
           <span className="footer__col__row__text">{PHONE_NUMBER}</span>
         </div>
         <div className="footer__col__row">
-          <Mail />
+          <MailIcon />
           <span className="footer__col__row__text">{EMAIL}</span>
         </div>
         <div className="footer__col__row">

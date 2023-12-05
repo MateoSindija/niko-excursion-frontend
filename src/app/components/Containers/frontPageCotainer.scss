@@ -16,7 +16,9 @@
       margin-bottom: 14px;
 
       &__first {
-        font-family: 'Playfair Display', sans-serif !important;
+        span {
+          font-family: 'Playfair Display', sans-serif !important;
+        }
       }
 
       &__last {

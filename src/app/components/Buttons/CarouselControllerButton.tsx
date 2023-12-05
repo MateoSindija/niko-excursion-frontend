@@ -1,5 +1,5 @@
 import React from 'react';
-import Arrow from '@/app/utils/vectors/Arrow';
+import ArrowIcon from '@/app/utils/vectors/ArrowIcon';
 import { Style } from 'util';
 
 interface IProps {
@@ -32,9 +32,9 @@ const CarouselControllerButton = ({
       }`}
     >
       {direction === 'next' ? (
-        <Arrow direction="next" size={arrowSize} />
+        <ArrowIcon direction="next" size={arrowSize} />
       ) : (
-        <Arrow direction="previous" size={arrowSize} />
+        <ArrowIcon direction="previous" size={arrowSize} />
       )}
     </button>
   );

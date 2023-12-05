@@ -6,7 +6,7 @@ interface IProps {
   size?: number;
 }
 
-const Arrow = ({ color = '#ACB7C6', direction, size = 20 }: IProps) => {
+const ArrowIcon = ({ color = '#ACB7C6', direction, size = 20 }: IProps) => {
   return (
     <svg
       width={size}
@@ -24,4 +24,4 @@ const Arrow = ({ color = '#ACB7C6', direction, size = 20 }: IProps) => {
   );
 };
 
-export default Arrow;
+export default ArrowIcon;

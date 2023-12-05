@@ -13,16 +13,21 @@ import {
 } from '@/app/constants/constants';
 import Logo from '@/app/components/Logo/Logo';
 import { NavbarContext } from '@/app/utils/contexts';
+import { EMAIL, PHONE_NUMBER } from '@/app/constants/contact';
+import PhoneIcon from '@/app/utils/vectors/PhoneIcon';
+import MailIcon from '@/app/utils/vectors/MailIcon';
 
 interface IProps {
   lang: Locale;
 }
 
+const TOP_NAVBAR_ICON_SIZE = 14;
 const SCROLL_LENGTH_UNTIL_NAVBAR_CHANGE = 200;
 const Navbar = ({ lang }: IProps) => {
   const pathname = usePathname();
   const windowLength = useDetectWindowSize();
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+  const dictionary = useContext(NavbarContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,8 +63,13 @@ const Navbar = ({ lang }: IProps) => {
           </div>
           <div className="navbar__content__navigation">
             <div className="navbar__content__navigation__top">
-              <div>Phone</div>
-              <div>Email</div>
+              <div className="navbar__content__navigation__top__contact">
+                <PhoneIcon size={TOP_NAVBAR_ICON_SIZE} /> {dictionary?.phone}:{' '}
+                {PHONE_NUMBER}
+              </div>
+              <div className="navbar__content__navigation__top__contact">
+                <MailIcon size={18} /> Email: {EMAIL}
+              </div>
             </div>
           </div>
         </div>

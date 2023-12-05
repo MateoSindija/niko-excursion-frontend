@@ -2,14 +2,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import NavbarHomePage from '@/app/components/Navbar/NavbarHomePage';
 import { useDetectWindowSize } from '@/app/hooks/useDetectWindowSize';
-import {
-  MOBILE_NAVBAR_BREAKPOINT,
-  TABLET_NAVBAR_BREAKPOINT,
-} from '@/app/constants/constants';
+import { TABLET_NAVBAR_BREAKPOINT } from '@/app/constants/constants';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import CarouselControllerButton from '@/app/components/Buttons/CarouselControllerButton';
 import Image from 'next/image';
-import { getDictionary } from '@/app/[lang]/dictionaries';
 interface IProps {
   lang: string;
 }

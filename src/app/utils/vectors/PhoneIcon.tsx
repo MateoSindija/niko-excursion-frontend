@@ -3,7 +3,7 @@ interface IProps {
   color?: string;
   size?: number;
 }
-const Phone = ({ color = '#D5AE82', size = 20 }: IProps) => {
+const PhoneIcon = ({ color = '#D5AE82', size = 20 }: IProps) => {
   return (
     <svg
       width={size}
@@ -27,4 +27,4 @@ const Phone = ({ color = '#D5AE82', size = 20 }: IProps) => {
   );
 };
 
-export default Phone;
+export default PhoneIcon;

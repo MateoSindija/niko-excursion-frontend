@@ -3,9 +3,14 @@
     "home": "Naslovna",
     "aboutUs": "O nama",
     "contact": "Kontakt",
-    "tours": "Ekskurzije"
+    "tours": "Ekskurzije",
+    "phone": "Mobitel"
   },
-
+  "frontPageContainers": {
+    "galleryTitle": "Galerija Slika",
+    "reviewsTitle": "Ocjene Naših Klijenta",
+    "popularExcursions": "Popularne ekskurzije"
+  },
   "footer": {
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla pharetra tellus, bibendum consequat urna bibendum ac. Pellentesque lobortis tellus in ipsum bibendum, fermentum ultricies enim suscipit",
     "overview": "Pregled",

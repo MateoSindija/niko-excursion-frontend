@@ -9,6 +9,7 @@ import ImageNext, { ImageProps } from 'next/image';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 import Link from 'next/link';
+import { useDisableBodyScroll } from '@/app/hooks/useDisableBodyScroll';
 
 interface IProps extends ImageProps {
   srcArray?: Array<string>;
@@ -16,6 +17,8 @@ interface IProps extends ImageProps {
 const ImageModal = ({ ...props }: IProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  useDisableBodyScroll(isOpen);
+
   useEffect(() => {
     let lightbox: PhotoSwipeLightbox | null = new PhotoSwipeLightbox({
       children: 'a',
@@ -24,22 +27,20 @@ const ImageModal = ({ ...props }: IProps) => {
     });
     lightbox.init();
 
+    lightbox.on('close', () => {
+      setIsOpen(false);
+    });
+
+    lightbox.on('beforeOpen', () => {
+      setIsOpen(true);
+    });
+
     return () => {
+      setIsOpen(false);
       lightbox?.destroy();
       lightbox = null;
     };
   }, []);
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isOpen]);
 
   useEffect(() => {
     const getImageSize = async () => {

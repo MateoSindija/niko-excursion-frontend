@@ -79,7 +79,7 @@ const Gallery = () => {
               height={320}
               width={420}
             />
-          </div>{' '}
+          </div>
           <div className="gallery__slide">
             <ImageModal
               src="/island_promo_1.jpeg"

@@ -1,0 +1,120 @@
+.reviewsSlider {
+  padding: 1.6rem;
+
+  &__dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__dot {
+      cursor: pointer;
+      width: 2.4rem;
+      height: 2.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.75rem;
+      margin-left: 0.75rem;
+      background-color: transparent;
+      border: none;
+
+      &--selected::after {
+        background-color: $orange-color !important;
+      }
+
+      &::after {
+        background: white;
+        border-radius: 50%;
+        width: 0.7rem;
+        height: 0.7rem;
+        content: '';
+      }
+    }
+  }
+
+  &__container {
+    backface-visibility: hidden;
+    display: flex;
+    touch-action: pan-y;
+    margin-left: -20px;
+  }
+
+  &__slide {
+    flex: 0 0 50%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding-left: 20px;
+  }
+
+  &__viewport {
+    overflow: hidden;
+  }
+}
+
+.reviewContainer {
+  background-color: white;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding: clamp(10px, 8%, 40px) 20px;
+  display: flex;
+  flex-direction: row;
+
+  &__stars {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    min-width: 160px;
+    box-sizing: border-box;
+    height: 30px;
+    background-color: $orange-color;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+    &__star {
+      margin-right: 5px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 13px;
+
+    &__user {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      font-family: 'Playfair Display', sans-serif;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    &__review {
+      color: #75808f;
+      font-family: 'Playfair Display', sans-serif;
+      text-align: left;
+    }
+  }
+
+  &__images {
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__user {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .reviewsSlider__slide {
+    flex: 0 0 100%;
+  }
+}
