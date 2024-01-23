@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 interface IProps {
-  children: JSX.Element;
+  children: React.JSX.Element;
   title: string;
 }
 const SecondaryPagesContainer = ({ children, title }: IProps) => {

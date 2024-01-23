@@ -5,41 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment=";">
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/about-us/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/contact/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/dictionaries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/dictionaries.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Buttons/CarouselControllerButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Buttons/CarouselControllerButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Buttons/LanguageButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Buttons/LanguageButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/PromoCarousel/PromoCarousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/PromoCarousel/PromoCarousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/PromoCarousel/promoCarousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/PromoCarousel/promoCarousel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ReviewsCarousel/ReviewContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ReviewsCarousel/ReviewContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ReviewsCarousel/Reviews.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ReviewsCarousel/Reviews.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ReviewsCarousel/reviews.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ReviewsCarousel/reviews.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Modals/ImageModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Modals/ImageModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar/MobileNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar/MobileNavbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/constants/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/constants/contact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/contact.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dictionaries/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dictionaries/hr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/hr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useDetectRef.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useDetectRef.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useDetectWindowSize.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useDetectWindowSize.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useDisableBodyScroll.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useDisableBodyScroll.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/interfaces/reviews.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/reviews.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/abstracts/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/abstracts/_functions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/abstracts/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/abstracts/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/abstracts/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/abstracts/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/base/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base/_typography.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Containers/SecondaryPagesContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Containers/SecondaryPagesContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/utils/getCurrentLanguage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/getCurrentLanguage.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,11 +134,22 @@
       <workItem from="1705829675401" duration="4183000" />
       <workItem from="1705834488562" duration="7884000" />
       <workItem from="1705942142238" duration="6016000" />
-      <workItem from="1706004435577" duration="445000" />
+      <workItem from="1706004435577" duration="1218000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
