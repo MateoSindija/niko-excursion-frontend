@@ -13,7 +13,8 @@ export default async function Home({
 }: {
   params: { lang: Locale };
 }) {
-  const { navigation, frontPageContainers } = await getDictionary(lang);
+  const { navigation, frontPageContainers, promoCarouselText } =
+    await getDictionary(lang);
   const reviewFile = await fs.readFile(
     process.cwd() + '/public/files/reviews.json',
     'utf8',
@@ -23,7 +24,7 @@ export default async function Home({
   return (
     <>
       <NavbarDictionaryProvider dictionary={navigation}>
-        <PromoCarousel lang={lang} />
+        <PromoCarousel lang={lang} text={promoCarouselText} />
       </NavbarDictionaryProvider>
       <FrontPageContainer
         title={frontPageContainers?.galleryTitle}

@@ -1,0 +1,73 @@
+.contactForm {
+  flex: 1 1 400px;
+  min-height: 500px;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 30px 60px;
+  border: 2px solid #f2f2f2;
+
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 20px;
+
+    &__subheading {
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: $cool-grey;
+    }
+    &__first {
+      font-family: 'Playfair Display', sans-serif;
+      font-weight: 400;
+    }
+
+    &__rest {
+      font-family: 'Playfair Display', sans-serif;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+
+    &__inputContainer {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 100px;
+      margin-bottom: auto;
+      textarea {
+        @include input();
+        margin-bottom: 30px;
+        min-height: 118px;
+      }
+
+      input {
+        @include input();
+      }
+
+      label {
+        text-transform: uppercase;
+        color: $cool-grey;
+        margin-bottom: 7px;
+        font-size: 14px;
+      }
+    }
+  }
+  &__button {
+    margin-top: auto;
+    width: 100%;
+    height: 50px;
+    text-transform: uppercase;
+    color: white;
+    background-color: $orange-color;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    @include ripple-effect($orange-color);
+  }
+}

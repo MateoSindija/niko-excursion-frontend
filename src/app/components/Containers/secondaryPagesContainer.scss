@@ -1,0 +1,38 @@
+.pageContainer {
+  padding-top: 71px;
+
+  &__banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 300px;
+    width: 100%;
+
+    &__title {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      font-family: 'Playfair Display', sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: white;
+    }
+    img {
+      object-fit: cover;
+      overflow: hidden;
+    }
+  }
+
+  &__content {
+    padding: 70px clamp(0px, 10%, 120px);
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .pageContainer {
+    &__content {
+      padding: 70px 5px;
+    }
+  }
+}

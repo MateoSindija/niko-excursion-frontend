@@ -1,0 +1,32 @@
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #f2f2f2;
+  width: 150px;
+  height: 230px;
+  padding: 40px 40px;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      text-align: center;
+      margin: 15px 0;
+      font-size: 20px;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-family: 'Playfair Display', sans-serif;
+    }
+  }
+
+  &__info {
+    font-family: 'Playfair Display', sans-serif;
+    color: $cool-grey;
+    margin: 15px 0;
+    text-align: center;
+  }
+}

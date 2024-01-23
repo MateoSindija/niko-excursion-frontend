@@ -1,4 +1,4 @@
-import '../styles/app.scss';
+import '@/styles/app.scss';
 import type { Metadata } from 'next';
 import Navbar from '@/app/components/Navbar/Navbar';
 import React, { useContext } from 'react';
@@ -6,6 +6,7 @@ import { i18n, Locale } from 'i18n.config';
 import Footer from '@/app/components/Footer/Footer';
 import { getDictionary } from '@/app/[lang]/dictionaries';
 import NavbarDictionaryProvider from '@/app/utils/contexts';
+import reviews from '@/app/components/Carousels/ReviewsCarousel/Reviews';
 
 export const metadata: Metadata = {
   title: 'Boat Excursion Niko',

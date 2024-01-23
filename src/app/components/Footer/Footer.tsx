@@ -6,7 +6,7 @@ import PhoneIcon from '@/app/utils/vectors/PhoneIcon';
 import MailIcon from '@/app/utils/vectors/MailIcon';
 import LocationIcon from '@/app/utils/vectors/LocationIcon';
 import Image from 'next/image';
-import { EMAIL, LOCATION, PHONE_NUMBER } from '@/app/constants/contact';
+import { EMAIL, LOCATION, PHONE_NUMBER } from '@/constants/contact';
 import ImageModal from '@/app/components/Modals/ImageModal';
 
 interface IProps {

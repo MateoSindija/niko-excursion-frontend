@@ -8,6 +8,7 @@ interface IProps {
   background: 'white' | 'transparent';
   className?: string;
   size?: number;
+  buttonStyle?: React.CSSProperties;
 }
 const CarouselControllerButton = ({
   onClick,
@@ -15,6 +16,7 @@ const CarouselControllerButton = ({
   background,
   className,
   size = 70,
+  buttonStyle,
 }: IProps) => {
   const style: React.CSSProperties = {
     width: size,
@@ -24,7 +26,7 @@ const CarouselControllerButton = ({
   return (
     <button
       onClick={onClick}
-      style={style}
+      style={{ ...style, ...buttonStyle }}
       className={`${className} carouselButton ${
         background === 'white'
           ? 'carouselButton--white'

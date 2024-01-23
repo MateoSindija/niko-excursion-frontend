@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { IReview } from '@/app/interfaces/reviews.model';
+import { IReview } from '@/interfaces/reviews.model';
 import ReviewContainer from '@/app/components/Carousels/ReviewsCarousel/ReviewContainer';
 import { Locale } from 'i18n.config';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -30,7 +30,7 @@ const Reviews = ({ reviews, lang }: IProps) => {
     <div className="reviewsSlider">
       <div className="reviewsSlider__viewport" ref={emblaRef}>
         <div className="reviewsSlider__container">
-          {reviews.map((review, index) => {
+          {reviews.map((review) => {
             return (
               <div className="reviewsSlider__slide" key={review.name}>
                 <ReviewContainer

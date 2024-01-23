@@ -6,14 +6,14 @@ import { Locale } from 'i18n.config';
 import LanguageButton from '@/app/components/Buttons/LanguageButton';
 import LinkList from '@/app/components/Navbar/LinkList';
 import MobileNavbar from '@/app/components/Navbar/MobileNavbar';
-import { useDetectWindowSize } from '@/app/hooks/useDetectWindowSize';
+import { useDetectWindowSize } from '@/hooks/useDetectWindowSize';
 import {
   MOBILE_NAVBAR_BREAKPOINT,
   TABLET_NAVBAR_BREAKPOINT,
-} from '@/app/constants/constants';
+} from '@/constants/constants';
 import Logo from '@/app/components/Logo/Logo';
 import { NavbarContext } from '@/app/utils/contexts';
-import { EMAIL, PHONE_NUMBER } from '@/app/constants/contact';
+import { EMAIL, PHONE_NUMBER } from '@/constants/contact';
 import PhoneIcon from '@/app/utils/vectors/PhoneIcon';
 import MailIcon from '@/app/utils/vectors/MailIcon';
 

@@ -9,7 +9,7 @@ import ImageNext, { ImageProps } from 'next/image';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 import Link from 'next/link';
-import { useDisableBodyScroll } from '@/app/hooks/useDisableBodyScroll';
+import { useDisableBodyScroll } from '@/hooks/useDisableBodyScroll';
 
 interface IProps extends ImageProps {
   srcArray?: Array<string>;

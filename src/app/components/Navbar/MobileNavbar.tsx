@@ -7,7 +7,7 @@ import handleLangChange from '@/app/utils/handleLangChange';
 import { i18n } from 'i18n.config';
 import Link from 'next/link';
 import Logo from '@/app/components/Logo/Logo';
-import { useDisableBodyScroll } from '@/app/hooks/useDisableBodyScroll';
+import { useDisableBodyScroll } from '@/hooks/useDisableBodyScroll';
 
 const EXIT_BUTTON_SIZE = 15;
 const SMALL_FLAG_SIZE = 17;

@@ -1,0 +1,54 @@
+{
+  "navigation": {
+    "home": "Naslovna",
+    "aboutUs": "O nama",
+    "contact": "Kontakt",
+    "tours": "Ekskurzije",
+    "phone": "Mobitel"
+  },
+  "promoCarouselText": [
+    {
+      "header": "Lorem ipsum dolor sit 1",
+      "subHeader": "Aliquam nec turpis quam. Aenean porta urna vitae purus porttitor volutpat."
+    },
+    {
+      "header": "Lorem ipsum dolor sit 2",
+      "subHeader": "Aliquam nec turpis quam. Aenean porta urna vitae purus porttitor volutpat."
+    }
+  ],
+  "frontPageContainers": {
+    "galleryTitle": "Galerija Slika",
+    "reviewsTitle": "Ocjene Naših Klijenta",
+    "popularExcursions": "Popularne ekskurzije"
+  },
+  "aboutUs": {
+    "title": "O Nama"
+  },
+  "contact": {
+    "title": "Kontaktirajte nas",
+    "info": {
+      "address": "Adresa",
+      "phone": "Mobitel",
+      "email": "Email",
+      "hours": "Radni sati",
+      "callUs": "Nazovite nas na:",
+      "openFromTo": "Pon - Ned: 9h do 22h"
+    },
+    "form": {
+      "title": "Pošaljite svoju poruku",
+      "subheading": "Slobodno nas kontaktirajte",
+      "nameLabel": "name",
+      "namePlaceholder": "Vaše Ime",
+      "emailLabel": "email",
+      "emailPlaceholder": "Vaša Email Adresa",
+      "messageLabel": "message",
+      "messagePlaceholder": "Napišite vašu poruku...",
+      "button": "Send your message"
+    }
+  },
+  "footer": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla pharetra tellus, bibendum consequat urna bibendum ac. Pellentesque lobortis tellus in ipsum bibendum, fermentum ultricies enim suscipit",
+    "overview": "Pregled",
+    "getInTouch": "Kontaktirajte nas"
+  }
+}

@@ -1,10 +1,8 @@
 import 'server-only';
 
 const dictionaries = {
-  hr: () =>
-    import('@/app/dictionaries/hr.json').then((module) => module.default),
-  en: () =>
-    import('@/app/dictionaries/en.json').then((module) => module.default),
+  hr: () => import('@/dictionaries/hr.json').then((module) => module.default),
+  en: () => import('@/dictionaries/en.json').then((module) => module.default),
 };
 
 // @ts-ignore

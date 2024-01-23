@@ -1,0 +1,54 @@
+{
+  "navigation": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "tours": "Excursions",
+    "phone": "Phone"
+  },
+  "promoCarouselText": [
+    {
+      "header": "Lorem ipsum dolor sit 1",
+      "subHeader": "Aliquam nec turpis quam. Aenean porta urna vitae purus porttitor volutpat."
+    },
+    {
+      "header": "Lorem ipsum dolor sit 2",
+      "subHeader": "Aliquam nec turpis quam. Aenean porta urna vitae purus porttitor volutpat."
+    }
+  ],
+  "frontPageContainers": {
+    "galleryTitle": "Picture Gallery",
+    "reviewsTitle": "Words From Clients",
+    "popularExcursions": "Popular Excursions"
+  },
+  "aboutUs": {
+    "title": "About Boat Niko Excursion"
+  },
+  "contact": {
+    "title": "Get In touch",
+    "info": {
+      "address": "address",
+      "phone": "phone",
+      "email": "email",
+      "hours": "Working hours",
+      "callUs": "Call us on:",
+      "openFromTo": "Mon - Sun: 9.00am to 10.00pm"
+    },
+    "form": {
+      "title": "Send Your Message",
+      "subheading": "Feel free to contact us",
+      "nameLabel": "name",
+      "namePlaceholder": "Your Name",
+      "emailLabel": "email",
+      "emailPlaceholder": "Your Email Address",
+      "messageLabel": "message",
+      "messagePlaceholder": "Write your message...",
+      "button": "Send your message"
+    }
+  },
+  "footer": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla pharetra tellus, bibendum consequat urna bibendum ac. Pellentesque lobortis tellus in ipsum bibendum, fermentum ultricies enim suscipit",
+    "overview": "Overview",
+    "getInTouch": "Get in touch"
+  }
+}

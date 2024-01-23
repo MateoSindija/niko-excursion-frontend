@@ -3,7 +3,7 @@
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import { getCurrentLanguage } from '@/app/utils/getCurrentLanguage';
-import { useDetectRef } from '@/app/hooks/useDetectRef';
+import { useDetectRef } from '@/hooks/useDetectRef';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { i18n } from 'i18n.config';

@@ -34,4 +34,8 @@ module.exports = {
       },
     ];
   },
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    domains: ['lh3.googleusercontent.com'],
+  },
 };
