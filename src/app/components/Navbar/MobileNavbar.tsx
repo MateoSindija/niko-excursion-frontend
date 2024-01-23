@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import LinkList from '@/app/components/Navbar/LinkList';
 import { usePathname } from 'next/navigation';
-import { getCurrentLanguage } from '@/app/utils/getCurrentLanguage';
+import { useGetCurrentLanguage } from '@/hooks/useGetCurrentLanguage';
 import handleLangChange from '@/app/utils/handleLangChange';
 import { i18n } from 'i18n.config';
 import Link from 'next/link';
@@ -17,7 +17,7 @@ interface IProps {
   lang: string;
 }
 const MobileNavbar = ({ lang }: IProps) => {
-  const currentLang = getCurrentLanguage();
+  const currentLang = useGetCurrentLanguage();
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const [isDashboardOpen, setIsDashboardOpen] = useState(false);
   const pathname = usePathname();

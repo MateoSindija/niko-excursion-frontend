@@ -1,7 +1,6 @@
-'use client';
 import { usePathname } from 'next/navigation';
 
-export const getCurrentLanguage = () => {
+export const useGetCurrentLanguage = () => {
   const pathName = usePathname();
   if (!pathName) return '/';
   const segments = pathName.split('/');

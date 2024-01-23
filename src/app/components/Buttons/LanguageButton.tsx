@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
-import { getCurrentLanguage } from '@/app/utils/getCurrentLanguage';
+import { useGetCurrentLanguage } from '@/hooks/useGetCurrentLanguage';
 import { useDetectRef } from '@/hooks/useDetectRef';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -13,7 +13,7 @@ const SMALL_FLAG_SIZE = 30;
 const LARGE_FLAG_SIZE = 40;
 const LanguageButton = () => {
   const pathName = usePathname();
-  const currentLang = getCurrentLanguage();
+  const currentLang = useGetCurrentLanguage();
   const dropDownRef = useRef(null);
   const [isSelectorActive, setIsSelectorActive] = useState(false);
 

@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment=";">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Containers/SecondaryPagesContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Containers/SecondaryPagesContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/utils/getCurrentLanguage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/getCurrentLanguage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/about-us/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Buttons/LanguageButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Buttons/LanguageButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/GalleryCarousel/Gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/GalleryCarousel/Gallery.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar/MobileNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar/MobileNavbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/utils/getCurrentLanguage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useGetCurrentLanguage.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,11 +80,11 @@
       <recent name="D:\Niko excursion\niko-excursion-frontend\public\info" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Niko excursion\niko-excursion-frontend\src\hooks" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\src\app" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\public" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\src" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\components\Info" />
-      <recent name="D:\Niko excursion\niko-excursion-frontend\public\info" />
     </key>
   </component>
   <component name="RunManager">
@@ -134,7 +137,7 @@
       <workItem from="1705829675401" duration="4183000" />
       <workItem from="1705834488562" duration="7884000" />
       <workItem from="1705942142238" duration="6016000" />
-      <workItem from="1706004435577" duration="1218000" />
+      <workItem from="1706004435577" duration="2313000" />
     </task>
     <servers />
   </component>

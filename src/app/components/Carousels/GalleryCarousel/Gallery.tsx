@@ -1,17 +1,15 @@
 'use client';
 import React from 'react';
-import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
+import useEmblaCarousel from 'embla-carousel-react';
+import { EmblaOptionsType } from 'embla-carousel';
 import Autoplay, { AutoplayType } from 'embla-carousel-autoplay';
-import Image from 'next/image';
 import ImageModal from '@/app/components/Modals/ImageModal';
 
 const autoPlayOptions = { stopOnInteraction: false };
 const options: EmblaOptionsType = { align: 'start', loop: false };
 const Gallery = () => {
-  const [emblaRefTop, emblaApiTop] = useEmblaCarousel(options, [
-    Autoplay(autoPlayOptions),
-  ]);
-  const [emblaRefBottom, emblaApiBottom] = useEmblaCarousel(options, [
+  const [emblaRefTop] = useEmblaCarousel(options, [Autoplay(autoPlayOptions)]);
+  const [emblaRefBottom] = useEmblaCarousel(options, [
     Autoplay(autoPlayOptions),
   ]);
 
