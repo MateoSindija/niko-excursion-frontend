@@ -1,0 +1,7 @@
+.signOut {
+  border-radius: 12px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid $cool-grey;
+  @include ripple-effect($cool-grey);
+}

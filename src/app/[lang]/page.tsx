@@ -8,6 +8,7 @@ import Gallery from '@/app/components/Carousels/GalleryCarousel/Gallery';
 import Reviews from '@/app/components/Carousels/ReviewsCarousel/Reviews';
 import { promises as fs } from 'fs';
 import Excursions from '@/app/components/Carousels/ExcursionsCarousel/Excursions';
+import SignOutButton from '@/app/components/Buttons/SignOutButton';
 export default async function Home({
   params: { lang },
 }: {

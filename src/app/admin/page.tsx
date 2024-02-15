@@ -1,13 +1,10 @@
 import React from 'react';
+import LoginForm from '@/app/components/Forms/LoginForm';
 
 const Page = () => {
   return (
-    <div>
-      <form>
-        <label htmlFor="email"></label>
-        <input type="email" name="" id="email" />
-        <input type="password" name="" id="" />
-      </form>
+    <div className="adminPage">
+      <LoginForm />
     </div>
   );
 };

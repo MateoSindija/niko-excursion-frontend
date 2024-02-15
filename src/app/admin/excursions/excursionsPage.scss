@@ -1,0 +1,18 @@
+.excursionsPage {
+  &__nav {
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    &__newExcursion {
+      height: 40px;
+      padding: 10px;
+      outline: none;
+      border: none;
+      background-color: $lighter-blue;
+      color: white;
+      text-transform: uppercase;
+      border-radius: 12px;
+      @include ripple-effect($lighter-blue);
+    }
+  }
+}

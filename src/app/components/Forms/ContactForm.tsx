@@ -2,8 +2,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { contactSchema } from '@/zod/contactSchema';
 import * as z from 'zod';
-import { Locale } from 'i18n.config';
-import { getDictionary } from '@/app/[lang]/dictionaries';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 

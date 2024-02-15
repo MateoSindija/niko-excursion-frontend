@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment=";">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/about-us/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Buttons/LanguageButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Buttons/LanguageButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/GalleryCarousel/Gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/GalleryCarousel/Gallery.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar/MobileNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar/MobileNavbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/utils/getCurrentLanguage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useGetCurrentLanguage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/ContactForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/ContactForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/contectForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/contactForm.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +28,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript File" />
-        <option value="SCSS File" />
         <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -34,7 +41,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2XkgA6DivQdIugXtAANuWNIAleP" />
   <component name="ProjectLevelVcsManager">
@@ -80,11 +87,11 @@
       <recent name="D:\Niko excursion\niko-excursion-frontend\public\info" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\admin" />
+      <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\api\auth\[...nextauth]" />
+      <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\api\auth" />
+      <recent name="D:\Niko excursion\niko-excursion-frontend\src\prisma" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\src\hooks" />
-      <recent name="D:\Niko excursion\niko-excursion-frontend\src\app" />
-      <recent name="D:\Niko excursion\niko-excursion-frontend\public" />
-      <recent name="D:\Niko excursion\niko-excursion-frontend\src" />
-      <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\components\Info" />
     </key>
   </component>
   <component name="RunManager">
@@ -137,7 +144,18 @@
       <workItem from="1705829675401" duration="4183000" />
       <workItem from="1705834488562" duration="7884000" />
       <workItem from="1705942142238" duration="6016000" />
-      <workItem from="1706004435577" duration="2313000" />
+      <workItem from="1706004435577" duration="3469000" />
+      <workItem from="1706008182797" duration="2485000" />
+      <workItem from="1706013867356" duration="9072000" />
+      <workItem from="1706033189407" duration="3045000" />
+      <workItem from="1706090169262" duration="4071000" />
+      <workItem from="1706186500257" duration="3601000" />
+      <workItem from="1706264818337" duration="2123000" />
+      <workItem from="1706350239552" duration="11291000" />
+      <workItem from="1707559045096" duration="4915000" />
+      <workItem from="1707577020541" duration="6016000" />
+      <workItem from="1707903476182" duration="13116000" />
+      <workItem from="1707987555712" duration="10576000" />
     </task>
     <servers />
   </component>

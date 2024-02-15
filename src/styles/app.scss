@@ -9,13 +9,20 @@
 @import '../app/components/Buttons/carouselControllerButton';
 @import '../app/components/Carousels/PromoCarousel/promoCarousel';
 @import '../app/components/Containers/frontPageCotainer';
-@import '../app/components/Forms/contectForm';
+@import '../app/components/Forms/contactForm';
+@import '../app/components/Forms/loginForm';
+@import '../app/components/Forms/excursionForm';
 @import '../app/components/Containers/secondaryPagesContainer';
 @import '../app/components/Carousels/ReviewsCarousel/reviews';
 @import '../app/components/Carousels/GalleryCarousel/gallery';
 @import '../app/components/Maps/googleMaps';
 @import '../app/components/Cards/infoCard';
 @import '../app/[lang]/contact/contactPage';
+@import '../app/components/Buttons/signOutButton';
+@import '../app/admin/adminPage';
+@import '../app/admin/excursions/excursionsPage';
+@import '../app/components/Lists/excursionList';
+@import '../app/components/Modals/confirmModal';
 
 * {
   margin: 0;

@@ -1,0 +1,45 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  @include generic-shadow;
+  padding: 50px 70px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  align-items: center;
+  &__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__inputContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    label {
+      margin-bottom: 10px;
+    }
+    input {
+      @include input();
+      margin-bottom: 20px;
+    }
+  }
+
+  &__error {
+    width: 100%;
+    text-align: left;
+    margin: -10px 0 10px 0;
+    color: red;
+  }
+
+  &__button {
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 100%;
+    background-color: $lighter-blue;
+    @include ripple-effect($lighter-blue);
+    color: white;
+    text-transform: uppercase;
+  }
+}
