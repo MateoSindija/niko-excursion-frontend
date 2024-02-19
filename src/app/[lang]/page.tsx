@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Locale } from 'i18n.config';
 import PromoCarousel from '@/app/components/Carousels/PromoCarousel/PromoCarousel';
 import { getDictionary } from '@/app/[lang]/dictionaries';
@@ -9,6 +9,9 @@ import Reviews from '@/app/components/Carousels/ReviewsCarousel/Reviews';
 import { promises as fs } from 'fs';
 import Excursions from '@/app/components/Carousels/ExcursionsCarousel/Excursions';
 import SignOutButton from '@/app/components/Buttons/SignOutButton';
+
+import dynamic from 'next/dynamic';
+
 export default async function Home({
   params: { lang },
 }: {

@@ -3,15 +3,16 @@
 import imagesUpload from '@/app/api/database/storageUpload';
 import {
   addDoc,
+  arrayUnion,
   collection,
   doc,
   getFirestore,
   setDoc,
+  updateDoc,
 } from '@firebase/firestore';
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '@/firebase/config';
 import { revalidatePath } from 'next/cache';
-import { contactSchema } from '@/zod/contactSchema';
 import { excursionSchema } from '@/zod/excursionSchema';
 import handleTitleImage from '@/app/utils/handleTitleImage';
 
@@ -31,7 +32,8 @@ function getImagesFromFormData(formData: FormData, key: string): File[] {
   return images;
 }
 
-export default async function addExcursionServer(
+export default async function updateExcursion(
+  id: string,
   formData: FormData,
   imagesFormData: FormData,
 ) {
@@ -60,30 +62,28 @@ export default async function addExcursionServer(
   }
 
   const imagesFiles: File[] = getImagesFromFormData(imagesFormData, 'images');
-  if (imagesFiles.length === 0) return false;
-  const urlArray: string[] = await imagesUpload(imagesFiles);
+  let urlArray: string[] = [];
+  if (imagesFiles.length !== 0) {
+    urlArray = await imagesUpload(imagesFiles);
+  }
 
-  if (urlArray.length) {
-    try {
-      const docRef = await addDoc(collection(db, 'Excursion'), {
-        titleHr: validatedFields.data.titleHr,
-        titleEn: validatedFields.data.titleEn,
-        images: urlArray,
-        duration: validatedFields.data.duration,
-        descriptionCro: validatedFields.data.descCro,
-        descriptionEng: validatedFields.data.descEng,
-        price: validatedFields.data.price,
-        maxPersons: validatedFields.data.maxPersons,
-        titleImage: handleTitleImage(urlArray, validatedFields.data.titleImage),
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      });
-      revalidatePath('/admin/new-excursion/[[...id]]', 'page');
-      return !!docRef.id;
-    } catch (e) {
-      return false;
-    }
-  } else {
+  try {
+    await updateDoc(doc(db, 'Excursion', id), {
+      titleHr: validatedFields.data.titleHr,
+      titleEn: validatedFields.data.titleEn,
+      images: arrayUnion(...urlArray),
+      duration: validatedFields.data.duration,
+      descriptionCro: validatedFields.data.descCro,
+      descriptionEng: validatedFields.data.descEng,
+      maxPersons: validatedFields.data.maxPersons,
+      price: validatedFields.data.price,
+      titleImage: handleTitleImage(urlArray, validatedFields.data.titleImage),
+      updatedAt: new Date(),
+    });
+    revalidatePath('/admin/new-excursion/[[...id]]', 'page');
+    return true;
+  } catch (e) {
+    console.log(e);
     return false;
   }
 }

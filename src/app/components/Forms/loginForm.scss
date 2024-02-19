@@ -37,6 +37,7 @@
     border: none;
     height: 40px;
     width: 100%;
+    margin-bottom: 15px;
     background-color: $lighter-blue;
     @include ripple-effect($lighter-blue);
     color: white;

@@ -24,6 +24,17 @@
   "aboutUs": {
     "title": "About Boat Niko Excursion"
   },
+  "excursionsListText": {
+    "title": "Explore the Zadar canal",
+    "subHeader": "Choose an excursion"
+  },
+  "excursionCard": {
+    "duration": "Duration:",
+    "hours": "Hours",
+    "persons": "Persons",
+    "button": "More Details",
+    "price": "Price"
+  },
   "contact": {
     "title": "Get In touch",
     "info": {
@@ -32,7 +43,7 @@
       "email": "email",
       "hours": "Working hours",
       "callUs": "Call us on:",
-      "openFromTo": "Mon - Sun: 9.00am to 10.00pm"
+      "openFromTo": "Mon - Sun: 9.00 am to 10.00 pm"
     },
     "form": {
       "title": "Send Your Message",
@@ -43,7 +54,9 @@
       "emailPlaceholder": "Your Email Address",
       "messageLabel": "message",
       "messagePlaceholder": "Write your message...",
-      "button": "Send your message"
+      "button": "Send your message",
+      "emailFailed": "Something went wrong please try again later",
+      "emailSuccess": "Mail sent successfully"
     }
   },
   "footer": {

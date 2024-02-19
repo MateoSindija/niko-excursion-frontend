@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { loginSchema } from '@/zod/loginSchema';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 type FormData = z.infer<typeof loginSchema>;
 const LoginForm = () => {
@@ -68,6 +69,7 @@ const LoginForm = () => {
       <button type="submit" className="loginForm__button" disabled={isLoading}>
         Prijava
       </button>
+      <Link href={'/'}>Povratak na glavnu stranicu</Link>
     </form>
   );
 };

@@ -1,3 +1,14 @@
+.changeBtn {
+  text-decoration: none;
+  background-color: blue;
+  @include ripple-effect(blue);
+  margin-right: 5px;
+}
+.deleteBtn {
+  background-color: red;
+  @include ripple-effect(red);
+}
+
 .excursionList {
   display: flex;
   flex-direction: column;
@@ -55,13 +66,21 @@
     &__duration {
       display: flex;
       justify-content: center;
-      width: 100px;
+      width: 180px;
     }
 
     &__createdAt {
       display: flex;
       justify-content: center;
       width: 200px;
+    }
+
+    &__button {
+      color: white;
+      text-transform: uppercase;
+      padding: 10px;
+      border: none;
+      font-size: 14px !important;
     }
   }
 }

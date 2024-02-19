@@ -24,6 +24,17 @@
   "aboutUs": {
     "title": "O Nama"
   },
+  "excursionsListText": {
+    "title": "Istražite zadarski kanal",
+    "subHeader": "Odaberite ekskurziju"
+  },
+  "excursionCard": {
+    "duration": "Trajanje:",
+    "hours": "Sata",
+    "persons": "Osobe",
+    "button": "Više Detalja",
+    "price": "Cijena"
+  },
   "contact": {
     "title": "Kontaktirajte nas",
     "info": {
@@ -43,7 +54,9 @@
       "emailPlaceholder": "Vaša Email Adresa",
       "messageLabel": "message",
       "messagePlaceholder": "Napišite vašu poruku...",
-      "button": "Send your message"
+      "button": "Send your message",
+      "emailFailed": "Nešto je pošlo po krivu molimo pokušajte kasnije",
+      "emailSuccess": "Mail je uspješno poslan"
     }
   },
   "footer": {

@@ -40,6 +40,10 @@
       flex-direction: column;
       flex: 1 1 100px;
       margin-bottom: auto;
+
+      &__error {
+        color: red;
+      }
       textarea {
         @include input();
         margin-bottom: 30px;

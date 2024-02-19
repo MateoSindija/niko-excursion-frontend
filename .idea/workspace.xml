@@ -5,18 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment=";">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/about-us/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[lang]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/excursions/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/excursions/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/new-excursion/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/new-excursion/[[...id]]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/auth/[...nextauth]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/database/addExcursionServer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/addExcursionServer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/database/deleteExcursion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/deleteExcursion.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/database/getExcursions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/getExcursions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Forms/ContactForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/ContactForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/contectForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/contactForm.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/ExcursionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/ExcursionForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/contactForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/contactForm.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/excursionForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/excursionForm.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/loginForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/loginForm.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Lists/ExcursionsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Lists/ExcursionsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Lists/excursionList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Lists/excursionList.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Modals/ConfirmModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Modals/ConfirmModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/contact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/contact.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dictionaries/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dictionaries/hr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/hr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firebase/storageUpload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/storageUpload.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prisma/prisma.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prisma/schema.prisma" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zod/excursionSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/zod/excursionSchema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,9 +47,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript JSX File" />
-        <option value="SCSS File" />
         <option value="TypeScript File" />
+        <option value="SCSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -41,7 +60,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2XkgA6DivQdIugXtAANuWNIAleP" />
   <component name="ProjectLevelVcsManager">
@@ -87,11 +106,11 @@
       <recent name="D:\Niko excursion\niko-excursion-frontend\public\info" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Niko excursion\niko-excursion-frontend\public\animations" />
+      <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\api\database" />
+      <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\admin\new-excursion\[id]" />
+      <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\admin\new-excursion" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\admin" />
-      <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\api\auth\[...nextauth]" />
-      <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\api\auth" />
-      <recent name="D:\Niko excursion\niko-excursion-frontend\src\prisma" />
-      <recent name="D:\Niko excursion\niko-excursion-frontend\src\hooks" />
     </key>
   </component>
   <component name="RunManager">
@@ -156,6 +175,10 @@
       <workItem from="1707577020541" duration="6016000" />
       <workItem from="1707903476182" duration="13116000" />
       <workItem from="1707987555712" duration="10576000" />
+      <workItem from="1708009436190" duration="615000" />
+      <workItem from="1708159962968" duration="21509000" />
+      <workItem from="1708264263570" duration="9768000" />
+      <workItem from="1708332638093" duration="17731000" />
     </task>
     <servers />
   </component>
