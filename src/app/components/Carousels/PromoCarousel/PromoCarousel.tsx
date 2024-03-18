@@ -2,7 +2,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import NavbarHomePage from '@/app/components/Navbar/NavbarHomePage';
 import { useDetectWindowSize } from '@/hooks/useDetectWindowSize';
-import { TABLET_NAVBAR_BREAKPOINT } from '@/constants/constants';
+import {
+  BUTTON_OPACITY_LOWER,
+  SLIDE_DURATION,
+  TABLET_NAVBAR_BREAKPOINT,
+} from '@/constants/constants';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import CarouselControllerButton from '@/app/components/Buttons/CarouselControllerButton';
 import Image from 'next/image';
@@ -17,8 +21,6 @@ interface IProps {
   ];
 }
 
-const BUTTON_OPACITY_LOWER = 0.5;
-const SLIDE_DURATION = 8000;
 const PromoCarousel = ({ lang, text }: IProps) => {
   const windowSize = useDetectWindowSize();
   const firstRef = useRef(null);

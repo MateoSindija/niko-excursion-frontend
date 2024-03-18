@@ -35,6 +35,20 @@
     "button": "More Details",
     "price": "Price"
   },
+  "excursionPage": {
+    "title": "Book your tour",
+    "duration": "Duration:",
+    "maxPerson": "Max Persons:",
+    "overview": "Excursion Overview",
+    "included": "Included in your trip",
+    "other": "Other Excursions",
+    "includedItems": [
+      {
+        "title": "Accommodation",
+        "desc": "Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum"
+      }
+    ]
+  },
   "contact": {
     "title": "Get In touch",
     "info": {

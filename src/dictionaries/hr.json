@@ -35,6 +35,20 @@
     "button": "Više Detalja",
     "price": "Cijena"
   },
+  "excursionPage": {
+    "title": "Rezervirajte svoju eskurziju",
+    "duration": "Trajanje:",
+    "overview": "Pregled eskurzije",
+    "included": "Uključeno u vaš put",
+    "maxPerson": "Max Osoba:",
+    "other": "Ostale Eskurzije",
+    "includedItems": [
+      {
+        "title": "Smještaj",
+        "desc": "Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum"
+      }
+    ]
+  },
   "contact": {
     "title": "Kontaktirajte nas",
     "info": {

@@ -6,6 +6,7 @@ interface IProps {
   onClick: (event: React.MouseEvent) => void;
   direction: 'next' | 'previous';
   background: 'white' | 'transparent';
+  disabled?: boolean;
   className?: string;
   size?: number;
   buttonStyle?: React.CSSProperties;
@@ -17,6 +18,7 @@ const CarouselControllerButton = ({
   className,
   size = 70,
   buttonStyle,
+  disabled = false,
 }: IProps) => {
   const style: React.CSSProperties = {
     width: size,
@@ -26,6 +28,7 @@ const CarouselControllerButton = ({
   return (
     <button
       onClick={onClick}
+      disabled={disabled}
       style={{ ...style, ...buttonStyle }}
       className={`${className} carouselButton ${
         background === 'white'

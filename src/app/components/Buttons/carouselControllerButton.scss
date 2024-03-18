@@ -13,4 +13,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:disabled {
+    background-color: lightgrey !important;
+  }
 }

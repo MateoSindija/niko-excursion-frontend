@@ -1,0 +1,50 @@
+.button--prev {
+  left: 20px;
+}
+
+.button--next {
+  right: 20px;
+}
+
+.excursionPhotosCarousel {
+  position: relative;
+  height: 500px;
+  margin: auto;
+  &__button {
+    position: absolute;
+    border: 1px solid #acb7c6;
+    top: 50%;
+    z-index: 3;
+    background-color: white;
+    transition: opacity 150ms linear;
+  }
+
+  &__viewport {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    &__carousel {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+      &__slide {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        flex: 0 0 100%;
+        height: 100%;
+        width: 100%;
+        &__image {
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
