@@ -5,6 +5,7 @@ import SignOutButton from '@/app/components/Buttons/SignOutButton';
 import Link from 'next/link';
 import ExcursionForm from '@/app/components/Forms/ExcursionForm';
 import getExcursions from '@/app/api/database/getExcursions';
+import { IExcursion } from '@/interfaces/excursion.model';
 
 const Page = async ({
   params,

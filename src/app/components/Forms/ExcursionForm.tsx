@@ -10,6 +10,7 @@ import addExcursionServer from '@/app/api/database/addExcursionServer';
 import { ClipLoader } from 'react-spinners';
 import deleteImage from '@/app/api/database/deleteImageFromStorage';
 import updateExcursion from '@/app/api/database/updateExcursion';
+import { IExcursion } from '@/interfaces/excursion.model';
 
 type NewExcursionData = z.infer<typeof excursionSchema>;
 

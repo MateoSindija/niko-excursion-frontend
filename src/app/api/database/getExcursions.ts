@@ -8,6 +8,7 @@ import {
 } from '@firebase/firestore';
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '@/firebase/config';
+import { IExcursion } from '@/interfaces/excursion.model';
 
 const getExcursions = async (id?: string | null): Promise<IExcursion[]> => {
   const db = getFirestore(initializeApp(firebaseConfig));

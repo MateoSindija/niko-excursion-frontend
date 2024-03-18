@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Locale } from 'i18n.config';
 import { getDictionary } from '@/app/[lang]/dictionaries';
 import Link from 'next/link';
+import { IExcursion } from '@/interfaces/excursion.model';
 
 interface IProps {
   excursion: IExcursion;

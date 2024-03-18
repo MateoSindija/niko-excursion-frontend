@@ -5,6 +5,7 @@ import ConfirmModal from '@/app/components/Modals/ConfirmModal';
 import deleteExcursion from '@/app/api/database/deleteExcursion';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { IExcursion } from '@/interfaces/excursion.model';
 
 interface IExcursionsListProps {
   excursions: IExcursion[] | undefined;
