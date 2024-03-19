@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment=";">
+    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Fixed IExcursion not found error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/new-excursion/[[...id]]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/new-excursion/[[...id]]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/getExcursions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/getExcursions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/ExcursionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/ExcursionForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Lists/ExcursionsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Lists/ExcursionsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/excursion.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/excursion.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/auth/[...nextauth]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/utils/authProviders.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/authProviders.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,8 +155,17 @@
       <workItem from="1708264263570" duration="9768000" />
       <workItem from="1708332638093" duration="17731000" />
       <workItem from="1708444255237" duration="1943000" />
-      <workItem from="1710752292668" duration="15534000" />
+      <workItem from="1710752292668" duration="16208000" />
+      <workItem from="1710843306786" duration="1800000" />
     </task>
+    <task id="LOCAL−00001" summary="Fixed IExcursion not found error">
+      <option name="closed" value="true" />
+      <created>1710789235082</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1710789235082</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,5 +181,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed IExcursion not found error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed IExcursion not found error" />
   </component>
 </project>

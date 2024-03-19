@@ -1,13 +1,14 @@
 import CredentialsProvider from 'next-auth/providers/credentials';
-import { AuthOptions, NextAuthOptions } from 'next-auth';
+import NextAuth, { AuthOptions, NextAuthOptions } from 'next-auth';
 import firebase, { initializeApp } from 'firebase/app';
 import 'firebase/firestore';
 import { firebaseConfig } from '@/firebase/config';
 import { getAuth, signInWithEmailAndPassword } from '@firebase/auth';
+import { FirestoreAdapter } from '@next-auth/firebase-adapter';
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt',
   },
@@ -42,3 +43,7 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
 };
+
+const handler: NextAuthOptions = NextAuth(authOptions);
+
+export { handler as GET, handler as POST };
