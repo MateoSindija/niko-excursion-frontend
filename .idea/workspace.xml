@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Fixed build error">
+    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Fixed env public key">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/firebase/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/excursionPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/excursionPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/new-excursion/[[...id]]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/new-excursion/[[...id]]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/auth/[...nextauth]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/database/getExcursions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/getExcursions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/utils/authProviders.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dictionaries/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dictionaries/hr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/hr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zod/excursionSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/zod/excursionSchema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
         <option value="SCSS File" />
       </list>
     </option>
@@ -76,11 +88,11 @@
       <recent name="D:\Niko excursion\niko-excursion-frontend\public\info" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Niko excursion\niko-excursion-frontend\public" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\public\animations" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\api\database" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\admin\new-excursion\[id]" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\admin\new-excursion" />
-      <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -151,7 +163,9 @@
       <workItem from="1708332638093" duration="17731000" />
       <workItem from="1708444255237" duration="1943000" />
       <workItem from="1710752292668" duration="16208000" />
-      <workItem from="1710843306786" duration="2579000" />
+      <workItem from="1710843306786" duration="3312000" />
+      <workItem from="1710930051596" duration="7500000" />
+      <workItem from="1710937746252" duration="4563000" />
     </task>
     <task id="LOCAL−00001" summary="Fixed IExcursion not found error">
       <option name="closed" value="true" />
@@ -167,7 +181,14 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1710845484263</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Fixed env public key">
+      <option name="closed" value="true" />
+      <created>1710846074239</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1710846074239</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +208,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed IExcursion not found error" />
     <MESSAGE value="Fixed build error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed build error" />
+    <MESSAGE value="Fixed env public key" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed env public key" />
   </component>
 </project>

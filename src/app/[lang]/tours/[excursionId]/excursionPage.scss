@@ -1,50 +1,63 @@
 .excursionPage {
-  &__header {
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 39px;
-    margin-bottom: 8px;
-  }
-
-  &__subHeader {
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-    color: $cool-grey;
-    margin-bottom: 20px;
-
-    &__line {
-      margin-left: 5px;
-    }
-
-    img {
-      margin-right: 5px;
-    }
-  }
-
-  &__overview {
-    margin-top: 30px;
-
-    &__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 35px;
+  &__firstCol {
+    flex: 1 1 650px;
+    overflow: hidden;
+    &__header {
       font-family: 'Playfair Display', sans-serif;
-      font-size: 26px;
-      margin-bottom: 15px;
-      text-transform: uppercase;
+      font-size: 39px;
+      margin-bottom: 8px;
     }
 
-    &__desc {
+    &__subHeader {
+      display: flex;
+      align-items: center;
       font-size: 15px;
       color: $cool-grey;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+
+      &__line {
+        margin-left: 5px;
+      }
+
+      img {
+        margin-right: 5px;
+      }
+    }
+
+    &__overview {
+      margin-top: 30px;
+
+      &__title {
+        font-family: 'Playfair Display', sans-serif;
+        font-size: 26px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+
+      &__desc {
+        font-size: 15px;
+        color: $cool-grey;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__included {
+      &__title {
+        font-family: 'Playfair Display', sans-serif;
+        font-size: 26px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
     }
   }
 
-  &__included {
-    &__title {
-      font-family: 'Playfair Display', sans-serif;
-      font-size: 26px;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-    }
+  &__secondCol {
+    flex: 1 1 150px;
   }
 }
 

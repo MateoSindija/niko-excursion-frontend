@@ -47,7 +47,17 @@
         "title": "Smještaj",
         "desc": "Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum"
       }
-    ]
+    ],
+    "bookTour": {
+      "price": "Cijena",
+      "title": "Rezervirajte svoju eskurziju",
+      "name": "Vaše ime",
+      "phone": "Vaš broj mobitela",
+      "email": "Vaš email",
+      "date": "Odaberite datum",
+      "passengers": "Broj putnika",
+      "button": "Pošaljite zahtjev"
+    }
   },
   "contact": {
     "title": "Kontaktirajte nas",

@@ -47,7 +47,17 @@
         "title": "Accommodation",
         "desc": "Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum"
       }
-    ]
+    ],
+    "bookTour": {
+      "price": "Price",
+      "title": "Book your tour",
+      "name": "Your name",
+      "phone": "Your phone number",
+      "email": "Your Email",
+      "date": "Choose a date",
+      "passengers": "Number of passengers",
+      "button": "Send request"
+    }
   },
   "contact": {
     "title": "Get In touch",

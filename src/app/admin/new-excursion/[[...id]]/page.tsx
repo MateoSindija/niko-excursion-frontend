@@ -14,7 +14,7 @@ const Page = async ({
     id: string[] | undefined;
   };
 }) => {
-  const session = getServerSession();
+  const session = await getServerSession();
   let excursion: IExcursion[] = [];
   if (params.id) {
     excursion = await getExcursions(params.id[0]);

@@ -41,4 +41,13 @@ export const excursionSchema = z.object({
   titleImage: NumberOrString,
 });
 
+export const excursionReserveSchema = z.object({
+  name: z.string().min(2).max(100),
+  phone: z.string().min(3).max(100),
+  email: z.string().email(),
+  date: z.date().min(new Date()),
+  passengers: z.coerce.number().min(1).max(100),
+});
+
 export type User = z.infer<typeof excursionSchema>;
+export type ExcursionReserve = z.infer<typeof excursionReserveSchema>;

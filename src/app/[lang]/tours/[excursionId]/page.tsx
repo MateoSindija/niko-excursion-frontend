@@ -7,6 +7,8 @@ import PromoCarousel from '@/app/components/Carousels/PromoCarousel/PromoCarouse
 import ExcursionPhotosCarousel from '@/app/components/Carousels/ExcursionPhotosCarousel/ExcursionPhotosCarousel';
 import Image from 'next/image';
 import ItemsList from '@/app/components/Lists/ItemsList';
+import ReserveExcursionForm from '@/app/components/Forms/ReserveExcursionForm';
+import { IExcursion } from '@/interfaces/excursion.model';
 
 const Page = async ({
   params,
@@ -19,56 +21,65 @@ const Page = async ({
   const { excursionId, lang } = params;
   const { excursionPage } = await getDictionary(lang);
   const excursionArray = await getExcursions(excursionId);
-  const excursion = excursionArray[0];
+  const excursion: IExcursion | [] = excursionArray[0];
 
   return (
     <>
       <SecondaryPagesContainer title={excursionPage.title} bgColor={'#F0F3F7'}>
-        <>
-          <div className="excursionPage__header">
-            {lang === 'hr' ? excursion.titleHr : excursion.titleEn}
+        <div className="excursionPage">
+          <div className="excursionPage__firstCol">
+            <div className="excursionPage__firstCol__header">
+              {lang === 'hr' ? excursion?.titleHr : excursion?.titleEn}
+            </div>
+            <div className="excursionPage__firstCol__subHeader">
+              <Image
+                src="/clock_duration.svg"
+                width={18}
+                height={18}
+                alt="clock"
+              />
+              {`${excursionPage.duration} ${excursion?.duration} ${
+                lang === 'hr' ? 'Sata' : 'Hours'
+              }`}
+              <Image
+                src="/horizontal_line.svg"
+                alt="line"
+                width={5}
+                height={18}
+                className="excursionPage__firstCol__subHeader__line"
+              />
+              <Image src="/person.svg" width={18} height={18} alt="clock" />
+              {`${excursionPage?.maxPerson} ${excursion?.maxPersons}`}
+            </div>
+            <ExcursionPhotosCarousel imagesUrl={excursion?.images ?? []} />
+            <div className="excursionPage__firstCol__overview">
+              <div className="excursionPage__firstCol__overview__title">
+                {excursionPage?.overview}
+              </div>
+              <div className="excursionPage__firstCol__overview__desc">
+                {lang === 'hr'
+                  ? excursion?.descriptionCro
+                  : excursion?.descriptionEng}
+              </div>
+            </div>
+            <div className="excursionPage__firstCol__included">
+              <div className="excursionPage__firstCol__included__title">
+                {excursionPage.included}
+              </div>
+              <ItemsList itemsList={excursionPage?.includedItems} />
+            </div>
           </div>
-          <div className="excursionPage__subHeader">
-            <Image
-              src="/clock_duration.svg"
-              width={18}
-              height={18}
-              alt="clock"
+          <div className="excursionPage__secondCol">
+            <ReserveExcursionForm
+              price={excursion?.price}
+              maxPassengers={excursion?.maxPersons}
+              text={excursionPage.bookTour}
             />
-            {`${excursionPage.duration} ${excursion.duration} ${
-              lang === 'hr' ? 'Sata' : 'Hours'
-            }`}
-            <Image
-              src="/horizontal_line.svg"
-              alt="line"
-              width={5}
-              height={18}
-              className="excursionPage__subHeader__line"
-            />
-            <Image src="/person.svg" width={18} height={18} alt="clock" />
-            {`${excursionPage.maxPerson} ${excursion.maxPersons}`}
           </div>
-          <ExcursionPhotosCarousel imagesUrl={excursion.images ?? []} />
-          <div className="excursionPage__overview">
-            <div className="excursionPage__overview__title">
-              {excursionPage.overview}
-            </div>
-            <div className="excursionPage__overview__desc">
-              {lang === 'hr'
-                ? excursion.descriptionCro
-                : excursion.descriptionEng}
-            </div>
-          </div>
-          <div className="excursionPage__included">
-            <div className="excursionPage__included__title">
-              {excursionPage.included}
-            </div>
-            <ItemsList itemsList={excursionPage.includedItems} />
-          </div>
-        </>
+        </div>
       </SecondaryPagesContainer>
       <div className="otherTours">
-        <div className="otherTours__title">{excursionPage.other}</div>
+        <div className="otherTours__title">{excursionPage?.other}</div>
       </div>
     </>
   );
