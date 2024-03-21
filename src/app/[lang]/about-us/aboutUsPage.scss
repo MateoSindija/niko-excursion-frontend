@@ -1,0 +1,25 @@
+.aboutUsPage {
+  text-align: center;
+  &__subHeader {
+    font-family: 'Playfair Display', sans-serif;
+    text-transform: uppercase;
+    color: $cool-grey;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 20px;
+    &__firstPart {
+      font-weight: 500;
+      font-family: 'Playfair Display', sans-serif;
+    }
+    &__lastPart {
+      font-weight: 600;
+      font-family: 'Playfair Display', sans-serif;
+    }
+  }
+  &__desc {
+    color: #8b95a2;
+  }
+}

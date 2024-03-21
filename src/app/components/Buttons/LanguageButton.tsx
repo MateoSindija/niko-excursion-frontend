@@ -44,6 +44,7 @@ const LanguageButton = () => {
               <Link
                 className="langContainer__selector__option"
                 href={handleLangChange(locale, pathName)}
+                scroll={false}
                 key={locale}
               >
                 <Image

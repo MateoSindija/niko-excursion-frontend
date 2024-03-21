@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Added excursion reserve form">
+    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Fixed excursion photo carousel and added carousel for front page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/tours.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/tours.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/excursionCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/excursionCard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionPhotosCarousel/ExcursionPhotosCarousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionPhotosCarousel/ExcursionPhotosCarousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionPhotosCarousel/excrusionPhotosCarousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionPhotosCarousel/excrusionPhotosCarousel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionsCarousel/Excursions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionsCarousel/ExcursionsCarousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Containers/FrontPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Containers/FrontPageContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/about-us/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Buttons/LanguageButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Buttons/LanguageButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionsCarousel/ExcursionsCarousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionsCarousel/ExcursionsCarousel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dictionaries/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dictionaries/hr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/hr.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.scss" afterDir="false" />
@@ -29,8 +23,8 @@
       <list>
         <option value="CSS File" />
         <option value="TypeScript File" />
-        <option value="SCSS File" />
         <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -166,7 +160,7 @@
       <workItem from="1710843306786" duration="3312000" />
       <workItem from="1710930051596" duration="7500000" />
       <workItem from="1710937746252" duration="6361000" />
-      <workItem from="1711015715764" duration="10059000" />
+      <workItem from="1711015715764" duration="11722000" />
     </task>
     <task id="LOCAL−00001" summary="Fixed IExcursion not found error">
       <option name="closed" value="true" />
@@ -196,7 +190,14 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1710951387411</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Fixed excursion photo carousel and added carousel for front page">
+      <option name="closed" value="true" />
+      <created>1711032900572</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1711032900573</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +219,7 @@
     <MESSAGE value="Fixed build error" />
     <MESSAGE value="Fixed env public key" />
     <MESSAGE value="Added excursion reserve form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added excursion reserve form" />
+    <MESSAGE value="Fixed excursion photo carousel and added carousel for front page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed excursion photo carousel and added carousel for front page" />
   </component>
 </project>

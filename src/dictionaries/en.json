@@ -25,7 +25,10 @@
     "popularExcursions": "Popular Excursions"
   },
   "aboutUs": {
-    "title": "About Boat Niko Excursion"
+    "mainTitle": "About us",
+    "title": "Welcome to our site",
+    "subHeader": "Hello!",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere condimentum est, vitae volutpat enim condimentum eu. Aenean fermentum est vel posuere consectetur. Suspendisse efficitur mi eu dui imperdiet, eget volutpat quam rhoncus. Praesent rutrum venenatis nisl, sit amet sagittis lectus tempor consectetur. Duis dapibus volutpat libero, non fringilla turpis cursus in. Nam ornare urna et tempus molestie. Etiam luctus erat non orci aliquet, vitae gravida tellus ultrices. Mauris diam ligula, accumsan faucibus rutrum vitae, vestibulum vitae ligula. Vestibulum vehicula vestibulum neque, in mollis dui faucibus vitae. In hac habitasse platea dictumst. Integer felis metus, pretium sit amet maximus et, mollis eget libero. Sed risus metus, scelerisque sit amet dolor eget, vulputate auctor tellus. Morbi mattis placerat tincidunt. Suspendisse potenti. Ut non rhoncus justo.\n\nSuspendisse et mauris turpis. Phasellus porta mattis tellus, ut mattis dui laoreet ut. Vestibulum semper convallis leo faucibus tempus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris posuere tortor odio, elementum fermentum ex luctus at. Praesent condimentum sapien accumsan, tempor turpis nec, fermentum diam. Sed convallis, velit et aliquam posuere, eros mauris interdum erat, nec tincidunt dui ante et erat. Quisque efficitur ex arcu, vitae dignissim est tristique a. Nam lobortis ipsum non pretium sagittis. Quisque quis sapien felis. Sed porttitor libero at magna viverra lacinia at ut risus. Integer imperdiet vulputate mauris ac ornare. Proin ac elementum nisl, non mollis risus. Cras velit magna, porttitor nec sagittis sed, blandit id purus."
   },
   "excursionsListText": {
     "title": "Explore the Zadar canal",

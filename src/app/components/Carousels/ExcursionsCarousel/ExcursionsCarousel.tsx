@@ -13,7 +13,7 @@ import {
 
 interface IProps {
   text: { buttonTxt: string };
-  children: JSX.Element[];
+  children: React.JSX.Element[];
   lang: Locale;
 }
 
