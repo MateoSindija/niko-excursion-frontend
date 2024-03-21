@@ -4,6 +4,7 @@
   display: flex;
   box-sizing: border-box;
   position: relative;
+  background-color: white;
 
   &__info {
     padding: 30px 30px 20px;
@@ -78,7 +79,7 @@
 
         &__lower {
           font-family: 'Playfair Display', sans-serif;
-          font-size: 18px;
+          font-size: 22px;
         }
       }
     }

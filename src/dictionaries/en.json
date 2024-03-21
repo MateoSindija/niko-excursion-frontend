@@ -16,6 +16,9 @@
       "subHeader": "Aliquam nec turpis quam. Aenean porta urna vitae purus porttitor volutpat."
     }
   ],
+  "reviewCarouselText": {
+    "buttonTxt": "All Excursions"
+  },
   "frontPageContainers": {
     "galleryTitle": "Picture Gallery",
     "reviewsTitle": "Words From Clients",

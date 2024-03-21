@@ -7,23 +7,30 @@ import FrontPageContainer from '@/app/components/Containers/FrontPageContainer';
 import Gallery from '@/app/components/Carousels/GalleryCarousel/Gallery';
 import Reviews from '@/app/components/Carousels/ReviewsCarousel/Reviews';
 import { promises as fs } from 'fs';
-import Excursions from '@/app/components/Carousels/ExcursionsCarousel/Excursions';
+import ExcursionsCarousel from '@/app/components/Carousels/ExcursionsCarousel/ExcursionsCarousel';
 import SignOutButton from '@/app/components/Buttons/SignOutButton';
 
 import dynamic from 'next/dynamic';
+import getMostExpensiveExcursions from '@/app/api/database/getMostExpensiveExcursions';
+import ExcursionCard from '@/app/components/Cards/ExcursionCard';
 
 export default async function Home({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
-  const { navigation, frontPageContainers, promoCarouselText } =
-    await getDictionary(lang);
+  const {
+    navigation,
+    frontPageContainers,
+    promoCarouselText,
+    reviewCarouselText,
+  } = await getDictionary(lang);
   const reviewFile = await fs.readFile(
     process.cwd() + '/public/files/reviews.json',
     'utf8',
   );
   const reviewData = JSON.parse(reviewFile);
+  const excursions = await getMostExpensiveExcursions();
 
   return (
     <>
@@ -49,7 +56,17 @@ export default async function Home({
         titleColor="black"
         backgroundColor="grey"
       >
-        <Excursions />
+        <ExcursionsCarousel text={reviewCarouselText} lang={lang}>
+          {excursions.map((excursion) => {
+            return (
+              <ExcursionCard
+                key={excursion.id}
+                excursion={excursion}
+                lang={lang}
+              />
+            );
+          })}
+        </ExcursionsCarousel>
       </FrontPageContainer>
     </>
   );

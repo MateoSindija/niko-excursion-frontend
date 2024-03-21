@@ -1,0 +1,38 @@
+.excursionCarousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6rem;
+  &__dots {
+    display: flex;
+    margin-bottom: 1.6rem;
+  }
+
+  &__viewport {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 40px;
+    &__carousel {
+      display: flex;
+      flex-direction: row;
+      &__slide {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        flex: 0 0 100%;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  &__allBtn {
+    padding: 20px 40px;
+    width: fit-content;
+    background-color: #f0f3f7;
+    text-decoration: none;
+    border: 1px solid black;
+    color: black;
+    text-transform: uppercase;
+    @include ripple-effect(#f0f3f7);
+  }
+}

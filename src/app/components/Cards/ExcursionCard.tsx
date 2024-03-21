@@ -1,3 +1,4 @@
+'use server';
 import React from 'react';
 import Image from 'next/image';
 import { Locale } from 'i18n.config';
@@ -6,7 +7,7 @@ import Link from 'next/link';
 import { IExcursion } from '@/interfaces/excursion.model';
 
 interface IProps {
-  excursion: IExcursion;
+  excursion: IExcursion | undefined;
   lang: Locale;
 }
 
@@ -23,7 +24,7 @@ const ExcursionCard = async ({ excursion, lang }: IProps) => {
     maxPersons,
     duration,
     price,
-  } = excursion;
+  } = excursion ?? {};
   const { excursionCard } = await getDictionary(lang);
 
   return (
@@ -31,7 +32,7 @@ const ExcursionCard = async ({ excursion, lang }: IProps) => {
       <div className="excursionCard__imageContainer">
         <Image
           className="excursionCard__imageContainer__image"
-          src={titleImage}
+          src={titleImage ?? ''}
           alt={'promo'}
           sizes="(max-width: 800px) 100%, 270px"
           fill

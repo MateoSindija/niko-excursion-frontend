@@ -4,21 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Fixed env public key">
+    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Added excursion reserve form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/excursionPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/excursionPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/new-excursion/[[...id]]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/new-excursion/[[...id]]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/auth/[...nextauth]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/getExcursions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/getExcursions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/utils/authProviders.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/tours.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/tours.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/excursionCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/excursionCard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionPhotosCarousel/ExcursionPhotosCarousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionPhotosCarousel/ExcursionPhotosCarousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionPhotosCarousel/excrusionPhotosCarousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionPhotosCarousel/excrusionPhotosCarousel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionsCarousel/Excursions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionsCarousel/ExcursionsCarousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Containers/FrontPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Containers/FrontPageContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dictionaries/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dictionaries/hr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/hr.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/zod/excursionSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/zod/excursionSchema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +29,8 @@
       <list>
         <option value="CSS File" />
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="SCSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -52,28 +51,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.15.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.15.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Niko excursion/niko-excursion-frontend/public&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Niko excursion\\niko-excursion-frontend\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Sass/SCSS&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Niko excursion\\niko-excursion-frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "18.15.0",
+    "javascript.nodejs.core.library.typings.version": "18.15.0",
+    "last_opened_file_path": "D:/Niko excursion/niko-excursion-frontend/public",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "D:\\Niko excursion\\niko-excursion-frontend\\node_modules\\prettier",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Sass/SCSS",
+    "ts.external.directory.path": "D:\\Niko excursion\\niko-excursion-frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -165,7 +165,8 @@
       <workItem from="1710752292668" duration="16208000" />
       <workItem from="1710843306786" duration="3312000" />
       <workItem from="1710930051596" duration="7500000" />
-      <workItem from="1710937746252" duration="4563000" />
+      <workItem from="1710937746252" duration="6361000" />
+      <workItem from="1711015715764" duration="10059000" />
     </task>
     <task id="LOCAL−00001" summary="Fixed IExcursion not found error">
       <option name="closed" value="true" />
@@ -188,7 +189,14 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1710846074239</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Added excursion reserve form">
+      <option name="closed" value="true" />
+      <created>1710951387411</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1710951387411</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +217,7 @@
     <MESSAGE value="Fixed IExcursion not found error" />
     <MESSAGE value="Fixed build error" />
     <MESSAGE value="Fixed env public key" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed env public key" />
+    <MESSAGE value="Added excursion reserve form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added excursion reserve form" />
   </component>
 </project>

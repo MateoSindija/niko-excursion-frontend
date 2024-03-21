@@ -16,10 +16,13 @@ interface IProps {
   imagesUrl: string[];
 }
 
+const autoPlayOptions = { stopOnInteraction: true };
 const ExcursionPhotosCarousel = (props: IProps) => {
   const { imagesUrl } = props;
   const [buttonOpacity, setButtonOpacity] = useState(BUTTON_OPACITY_LOWER);
-  const [emblaRef, emblaApi] = useEmblaCarousel();
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay(autoPlayOptions),
+  ]);
 
   const onPrevButtonClick = useCallback(() => {
     if (!emblaApi) return;
@@ -64,10 +67,11 @@ const ExcursionPhotosCarousel = (props: IProps) => {
                   alt="Island Promo"
                   quality={100}
                   placeholder="blur"
+                  width={100}
                   height={500}
-                  width={400}
                   className="excursionPhotosCarousel__viewport__carousel__slide__image"
                   blurDataURL={url}
+                  sizes="(max-width: 400px) 1920px, 500px"
                 />
               </div>
             );

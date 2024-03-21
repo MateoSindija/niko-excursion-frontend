@@ -16,6 +16,9 @@
       "subHeader": "Aliquam nec turpis quam. Aenean porta urna vitae purus porttitor volutpat."
     }
   ],
+  "reviewCarouselText": {
+    "buttonTxt": "Sve Eskurzije"
+  },
   "frontPageContainers": {
     "galleryTitle": "Galerija Slika",
     "reviewsTitle": "Ocjene Naših Klijenta",
