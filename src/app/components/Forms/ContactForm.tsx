@@ -4,7 +4,7 @@ import { contactSchema } from '@/zod/contactSchema';
 import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import sendEmail from '@/app/api/resend/sendEmail';
+import sendContactEmail from '@/app/api/resend/sendContactEmail';
 import { getValue } from '@firebase/remote-config';
 
 interface IContactForm {
@@ -40,7 +40,7 @@ const ContactForm = ({ text }: IProps) => {
   const [splittedTitle] = useState(text.title.split(' '));
 
   const onSubmit = async () => {
-    const result = await sendEmail(
+    const result = await sendContactEmail(
       getValues('email'),
       getValues('message'),
       getValues('name'),

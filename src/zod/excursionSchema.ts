@@ -1,4 +1,4 @@
-import z from 'zod';
+import z, { ZodObject } from 'zod';
 
 const NumberOrString = z.union([
   z.string(), // allows strings
@@ -39,13 +39,22 @@ export const excursionSchema = z.object({
     .min(2, { message: 'Opis mora sadržavati barem 2 znaka' })
     .max(10000, { message: 'Opis mora sadržavati barem 10000 znakova' }),
   titleImage: NumberOrString,
+  isExcursionPublic: z.coerce.boolean(),
+  hours: z
+    .array(z.coerce.number().min(9).max(22))
+    .refine((val) => val.length > 0, {
+      message: 'Hours must have at least one number in array',
+      path: ['hours'],
+    })
+    .optional(),
 });
 
 export const excursionReserveSchema = z.object({
   name: z.string().min(2).max(100),
   phone: z.string().min(3).max(100),
+  message: z.string().min(2).max(1000).optional().or(z.literal('')),
   email: z.string().email(),
-  date: z.date().min(new Date()),
+  date: z.date().min(new Date('dd/MM/YYYY')),
   passengers: z.coerce.number().min(1).max(100),
 });
 

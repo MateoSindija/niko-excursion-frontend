@@ -57,23 +57,29 @@
   }
 
   &__secondCol {
-    flex: 1 1 150px;
+    flex: 1 1 270px;
   }
 }
 
 .otherTours {
   background-color: white;
   box-sizing: border-box;
-  height: 300px;
+  min-height: 300px;
+  height: fit-content;
   width: 100%;
   padding: 50px 100px;
-
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
   &__title {
     display: flex;
     justify-content: center;
     font-family: 'Playfair Display', sans-serif;
     font-size: 26px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     text-transform: uppercase;
   }
 }

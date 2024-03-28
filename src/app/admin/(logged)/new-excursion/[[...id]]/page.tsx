@@ -6,6 +6,7 @@ import Link from 'next/link';
 import ExcursionForm from '@/app/components/Forms/ExcursionForm';
 import getExcursions from '@/app/api/database/getExcursions';
 import { IExcursion } from '@/interfaces/excursion.model';
+import AdminNavbar from '@/app/components/Navbar/AdminNavbar';
 
 const Page = async ({
   params,
@@ -17,7 +18,7 @@ const Page = async ({
   const session = await getServerSession();
   let excursion: IExcursion[] = [];
   if (params.id) {
-    excursion = await getExcursions(params.id[0]);
+    excursion = await getExcursions({ id: params.id[0] });
   }
 
   if (!session) {
@@ -26,20 +27,7 @@ const Page = async ({
   }
 
   return (
-    <div>
-      <div className="excursionsPage__nav">
-        <Link href="/admin/excursions">
-          <button className="excursionsPage__nav__newExcursion" type="submit">
-            Lista eskurzija
-          </button>
-        </Link>
-        <Link href="/admin/active-excursions">
-          <button className="excursionsPage__nav__newExcursion" type="submit">
-            Lista aktivnih eskurzija
-          </button>
-        </Link>
-        <SignOutButton />
-      </div>
+    <div className="excursionsPage">
       <ExcursionForm {...excursion[0]} />
     </div>
   );

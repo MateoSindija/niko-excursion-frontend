@@ -6,6 +6,7 @@ import SignOutButton from '@/app/components/Buttons/SignOutButton';
 import Link from 'next/link';
 import getExcursions from '@/app/api/database/getExcursions';
 import ExcursionsList from '@/app/components/Lists/ExcursionsList';
+import AdminNavbar from '@/app/components/Navbar/AdminNavbar';
 
 const Page = async () => {
   const session = await getServerSession();
@@ -17,19 +18,6 @@ const Page = async () => {
   }
   return (
     <div className="excursionsPage">
-      <div className="excursionsPage__nav">
-        <Link href="/admin/new-excursion">
-          <button className="excursionsPage__nav__newExcursion" type="submit">
-            Dodaj novu eskurziju
-          </button>
-        </Link>
-        <Link href="/admin/active-excursions">
-          <button className="excursionsPage__nav__newExcursion" type="submit">
-            Lista aktivnih eskurzija
-          </button>
-        </Link>
-        <SignOutButton />
-      </div>
       <ExcursionsList excursions={excursions} />
     </div>
   );

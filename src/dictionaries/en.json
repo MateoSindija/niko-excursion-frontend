@@ -32,7 +32,12 @@
   },
   "excursionsListText": {
     "title": "Explore the Zadar canal",
-    "subHeader": "Choose an excursion"
+    "subHeader": "Choose an excursion type",
+    "toggleFilter": {
+      "fistOption": "Private",
+      "secondOption": "Public",
+      "desc": "On private you will be only"
+    }
   },
   "excursionCard": {
     "duration": "Duration:",
@@ -40,6 +45,11 @@
     "persons": "Persons",
     "button": "More Details",
     "price": "Price"
+  },
+  "excursionCardSmall": {
+    "price": "Price",
+    "maxPerson": "Max Persons:",
+    "duration": "Duration:"
   },
   "excursionPage": {
     "title": "Book your tour",
@@ -62,7 +72,14 @@
       "email": "Your Email",
       "date": "Choose a date",
       "passengers": "Number of passengers",
-      "button": "Send request"
+      "message": "Optional message",
+      "button": "Send request",
+      "chooseTime": "Available departure times",
+      "noAvailableTime": "Unfortunately, the selected day is fully booked",
+      "error": "Something went wrong! Please try again later",
+      "success": {
+        "message": "Your request was successfully sent! Expect our call or e-mail to confirm your reservation soon."
+      }
     }
   },
   "contact": {

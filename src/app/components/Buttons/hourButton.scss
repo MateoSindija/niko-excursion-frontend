@@ -1,0 +1,23 @@
+.selectedHour {
+  background-color: $orange-color !important;
+  color: white;
+}
+
+.notSelectedHour {
+  background-color: lightgrey !important;
+  border: 2px solid lightgrey !important;
+  opacity: 0.7;
+  color: white !important;
+}
+
+.hourButton {
+  border: 2px solid $orange-color;
+  background-color: white;
+  border-radius: 6px;
+
+  @include ripple-effect($orange-color);
+
+  &:hover {
+    color: white;
+  }
+}

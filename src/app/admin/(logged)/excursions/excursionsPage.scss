@@ -1,4 +1,16 @@
 .excursionsPage {
+  margin-top: 80px;
+
+  &__request {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    padding: 0 clamp(10px, 10%, 300px);
+    box-sizing: border-box;
+  }
+
   &__nav {
     padding: 5px 15px;
     display: flex;

@@ -9,6 +9,8 @@ import Image from 'next/image';
 import ItemsList from '@/app/components/Lists/ItemsList';
 import ReserveExcursionForm from '@/app/components/Forms/ReserveExcursionForm';
 import { IExcursion } from '@/interfaces/excursion.model';
+import getDocumentsWithoutGivenId from '@/app/api/database/getDocumentsWithoutGivenId';
+import ExcursionCardSmall from '@/app/components/Cards/ExcursionCardSmall';
 
 const Page = async ({
   params,
@@ -20,7 +22,9 @@ const Page = async ({
 }) => {
   const { excursionId, lang } = params;
   const { excursionPage } = await getDictionary(lang);
-  const excursionArray = await getExcursions(excursionId);
+  const excursionArray = await getExcursions({ id: excursionId });
+  const excursionArrayWithoutCurrent =
+    await getDocumentsWithoutGivenId(excursionId);
   const excursion: IExcursion | [] = excursionArray[0];
 
   return (
@@ -74,12 +78,27 @@ const Page = async ({
               price={excursion?.price}
               maxPassengers={excursion?.maxPersons}
               text={excursionPage.bookTour}
+              excursionName={excursion.titleHr}
+              isExcursionPublic={excursion.isExcursionPublic}
+              excursionStartingHours={excursion.hours}
+              id={excursion.id}
             />
           </div>
         </div>
       </SecondaryPagesContainer>
       <div className="otherTours">
         <div className="otherTours__title">{excursionPage?.other}</div>
+        <div className="otherTours__list">
+          {excursionArrayWithoutCurrent.map((excursion) => {
+            return (
+              <ExcursionCardSmall
+                key={excursion.id}
+                lang={lang}
+                excursion={excursion}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );

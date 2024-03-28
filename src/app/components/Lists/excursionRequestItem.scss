@@ -1,0 +1,75 @@
+.lg {
+  width: 250px;
+}
+
+.md {
+  width: 200px;
+}
+
+.sm {
+  width: 100px;
+}
+
+.confirmed {
+  border-top: 7px solid green;
+}
+
+.sent {
+  border-top: 7px solid gray;
+}
+
+.refused {
+  border-top: 7px solid red;
+}
+
+.requestBtn {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border: none;
+  color: white;
+}
+
+.requestItem {
+  flex-direction: column;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+
+  @include generic-shadow;
+
+  &__info {
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__buttons {
+      margin: 25px 0 0 auto;
+      width: 200px;
+      display: flex;
+      justify-content: space-between;
+
+      &__refuse {
+        background-color: red;
+        @include ripple-effect(red);
+      }
+
+      &__confirm {
+        background-color: green;
+        @include ripple-effect(green);
+      }
+    }
+
+    &__col {
+      &__title {
+        margin-bottom: 10px;
+      }
+
+      &__content {
+        overflow: auto;
+        max-height: 200px;
+      }
+    }
+  }
+}

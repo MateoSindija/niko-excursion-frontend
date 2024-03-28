@@ -32,7 +32,12 @@
   },
   "excursionsListText": {
     "title": "Istražite zadarski kanal",
-    "subHeader": "Odaberite ekskurziju"
+    "subHeader": "Odaberite Vrstu ekskurzije",
+    "toggleFilter": {
+      "fistOption": "Privatne",
+      "secondOption": "Javne",
+      "desc": "Biti cete vi samo"
+    }
   },
   "excursionCard": {
     "duration": "Trajanje:",
@@ -40,6 +45,11 @@
     "persons": "Osobe",
     "button": "Više Detalja",
     "price": "Cijena"
+  },
+  "excursionCardSmall": {
+    "price": "Cijena",
+    "maxPerson": "Max Osoba:",
+    "duration": "Trajanje:"
   },
   "excursionPage": {
     "title": "Rezervirajte svoju eskurziju",
@@ -62,7 +72,14 @@
       "email": "Vaš email",
       "date": "Odaberite datum",
       "passengers": "Broj putnika",
-      "button": "Pošaljite zahtjev"
+      "message": "Opcionalna napomena",
+      "button": "Pošaljite zahtjev",
+      "chooseTime": "Raspoloživo  vrijeme polaska",
+      "noAvailableTime": "Nažalost odabrani dan je potpuno zauzet",
+      "error": "Nešto je pošlo po krivu! Molimo pokušajte kasnije",
+      "success": {
+        "message": "Hvala na rezervaciji termina! Očekujte naš kontakt uskoro putem telefona ili e-maila za potvrdu termina."
+      }
     }
   },
   "contact": {

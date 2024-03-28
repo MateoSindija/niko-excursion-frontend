@@ -1,0 +1,45 @@
+.toggleButton {
+  padding: 10px 10px;
+  background-color: white;
+  border: 3px solid $dark-blue;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+
+  &__thumb {
+    position: absolute;
+    height: 100%;
+    width: calc(50%);
+    top: 0;
+    left: 0;
+    background-color: $dark-blue;
+    transform: translateX(0);
+    transition: left 0.15s ease;
+    z-index: 2;
+    border-radius: 10px;
+    font-family: 'Playfair Display', sans-serif;
+  }
+
+  &__option {
+    flex-grow: 1;
+    width: 80px;
+    display: flex;
+    z-index: 3;
+    position: relative;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+}
+
+.active {
+  color: white;
+}
+.on {
+  left: 50%;
+}

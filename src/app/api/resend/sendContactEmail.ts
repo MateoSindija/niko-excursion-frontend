@@ -4,14 +4,17 @@ import { EMAIL } from '@/constants/contact';
 import Server from 'next/server';
 import { contactSchema } from '@/zod/contactSchema';
 
-const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_KEY);
-const sendEmail = async (email: string, message: string, name: string) => {
+const resend = new Resend(process.env.RESEND_KEY);
+const sendContactEmail = async (
+  email: string,
+  message: string,
+  name: string,
+) => {
   const validatedFields = contactSchema.safeParse({
     email: email,
     message: message,
     name: name,
   });
-
   if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
@@ -30,4 +33,4 @@ const sendEmail = async (email: string, message: string, name: string) => {
     return error.message;
   }
 };
-export default sendEmail;
+export default sendContactEmail;

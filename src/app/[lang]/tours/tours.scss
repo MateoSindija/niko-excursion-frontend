@@ -4,11 +4,22 @@
   flex-direction: column;
   gap: 30px;
   &__subHeader {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase !important;
-    font-size: toRem(25);
-    text-align: center;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__desc {
+      margin-top: 15px;
+      color: #8b95a2;
+    }
+    &__title {
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase !important;
+      font-size: toRem(25);
+      text-align: center;
+    }
   }
 }

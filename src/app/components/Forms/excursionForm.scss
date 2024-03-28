@@ -46,6 +46,38 @@
       }
     }
 
+    &__multipleCheckboxes {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+
+      span {
+        margin-bottom: 10px;
+      }
+      &__hours {
+        display: flex;
+        align-items: center;
+        margin: 10px 15px 0 0;
+        input {
+          margin-left: 5px;
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+    &__checkboxContainer {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      label {
+        margin-right: 10px;
+      }
+      input {
+        height: 15px;
+        width: 15px;
+      }
+    }
+
     &__inputContainer {
       display: flex;
       flex-direction: column;

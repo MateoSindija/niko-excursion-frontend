@@ -11,9 +11,10 @@ import { ClipLoader } from 'react-spinners';
 import deleteImage from '@/app/api/database/deleteImageFromStorage';
 import updateExcursion from '@/app/api/database/updateExcursion';
 import { IExcursion } from '@/interfaces/excursion.model';
+import { Simulate } from 'react-dom/test-utils';
+import error = Simulate.error;
 
 type NewExcursionData = z.infer<typeof excursionSchema>;
-
 const ExcursionForm = (excursion: IExcursion | null) => {
   const [compressedFiles, setCompressedFiles] = useState<Array<File>>([]);
   const [excursionStatus, setExcursionStatus] = useState({
@@ -22,6 +23,8 @@ const ExcursionForm = (excursion: IExcursion | null) => {
     isAdded: false,
     isFileListEmpty: false,
   });
+  const hours = Array.from({ length: 22 - 9 + 1 }, (_, index) => 9 + index);
+
   const {
     reset,
     handleSubmit,
@@ -41,6 +44,8 @@ const ExcursionForm = (excursion: IExcursion | null) => {
       price: excursion?.price ?? 1,
       titleImage: excursion?.titleImage ?? '',
       maxPersons: excursion?.maxPersons ?? 1,
+      isExcursionPublic: excursion?.isExcursionPublic ?? false,
+      hours: excursion?.hours ?? [],
     },
   });
 
@@ -54,6 +59,8 @@ const ExcursionForm = (excursion: IExcursion | null) => {
       titleHr: excursion?.titleHr,
       titleEn: excursion?.titleEn,
       titleImage: excursion?.titleImage,
+      isExcursionPublic: excursion?.isExcursionPublic,
+      hours: excursion?.hours,
     });
   }, [excursion]);
 
@@ -114,6 +121,11 @@ const ExcursionForm = (excursion: IExcursion | null) => {
     formData.append('price', getValues('price').toString());
     formData.append('maxPersons', getValues('maxPersons').toString());
     formData.append('titleImage', getValues('titleImage').toString());
+    formData.append(
+      'isExcursionPublic',
+      getValues('isExcursionPublic').toString(),
+    );
+    formData.append('startingHours', JSON.stringify(getValues('hours')) ?? '');
 
     let status: boolean;
 
@@ -134,6 +146,7 @@ const ExcursionForm = (excursion: IExcursion | null) => {
       setExcursionStatus({ ...excursionStatus, isAdding: false, error: true });
     }
   };
+
   function filterImageFiles(fileList: FileList | null): File[] {
     const imageFiles: File[] = [];
 
@@ -194,6 +207,7 @@ const ExcursionForm = (excursion: IExcursion | null) => {
       }
     }
   };
+
   return (
     <div className="newExcursionForm">
       <form
@@ -309,6 +323,48 @@ const ExcursionForm = (excursion: IExcursion | null) => {
             </div>
           )}
         </div>
+        <div className="newExcursionForm__form__checkboxContainer">
+          <label htmlFor="isPrivate">Je li eskurzija javna</label>
+          <input
+            id="isPrivate"
+            type={'checkbox'}
+            {...register('isExcursionPublic')}
+            disabled={excursionStatus.isAdding}
+          />
+          {errors.isExcursionPublic && (
+            <div className="newExcursionForm__form__inputContainer__error">
+              {errors.isExcursionPublic.message}
+            </div>
+          )}
+        </div>
+        {watch('isExcursionPublic') && (
+          <>
+            <div>U koliko sati eksurzija kreće</div>
+            <fieldset className="newExcursionForm__form__multipleCheckboxes">
+              {hours.map((hour) => {
+                return (
+                  <div
+                    className="newExcursionForm__form__multipleCheckboxes__hours"
+                    key={hour}
+                  >
+                    <label htmlFor={hour.toString()}>{`${hour}:00`}</label>
+                    <input
+                      type="checkbox"
+                      id={hour.toString()}
+                      value={hour}
+                      {...register(`hours`)}
+                    />
+                  </div>
+                );
+              })}
+              {watch('hours')?.length === 0 && (
+                <div className="newExcursionForm__form__inputContainer__error">
+                  Odaberite barem jedno početno vrijeme
+                </div>
+              )}
+            </fieldset>
+          </>
+        )}
         <div className="newExcursionForm__form__inputContainer">
           <label htmlFor="photos">Fotografije</label>
           <input
@@ -320,7 +376,6 @@ const ExcursionForm = (excursion: IExcursion | null) => {
             onChange={handleCompressedUpload}
           />
         </div>
-
         <div className="newExcursionForm__form__images">
           {compressedFiles.map((image, index) => {
             return (
@@ -400,7 +455,6 @@ const ExcursionForm = (excursion: IExcursion | null) => {
             );
           })}
         </div>
-
         <button
           className="newExcursionForm__form__submit"
           type="submit"

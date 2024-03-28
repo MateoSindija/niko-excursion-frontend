@@ -3,10 +3,12 @@
 @import './abstracts/mixins';
 @import './base/typography';
 @import '../app/components/Navbar/navbar';
+@import '../app/components/Navbar/adminNavbar';
 @import '../app/components/Footer/footer';
 @import '../app/components/Buttons/sociaMediaButton';
 @import '../app/components/Buttons/languageButton';
 @import '../app/components/Buttons/carouselControllerButton';
+@import '../app/components/Buttons/toggleButton';
 @import '../app/components/Carousels/PromoCarousel/promoCarousel';
 @import '../app/components/Carousels/ExcursionPhotosCarousel/excrusionPhotosCarousel';
 @import '../app/components/Containers/frontPageCotainer';
@@ -21,15 +23,19 @@
 @import '../app/components/Maps/googleMaps';
 @import '../app/components/Cards/infoCard';
 @import '../app/components/Cards/excursionCard';
+@import '../app/components/Cards/excursionCardSmall';
+@import '../app/components/Calendar/calendarAndTime';
 @import '../app/[lang]/contact/contactPage';
 @import '../app/[lang]/about-us/aboutUsPage';
 @import '../app/[lang]/tours/tours';
 @import '../app/[lang]/tours/[excursionId]/excursionPage';
 @import '../app/components/Buttons/signOutButton';
-@import '../app/admin/adminPage';
-@import '../app/admin/excursions/excursionsPage';
+@import '../app/components/Buttons/hourButton';
+@import '../app/admin/(login)/adminPage';
+@import '../app/admin/(logged)/excursions/excursionsPage';
 @import '../app/components/Lists/excursionList';
 @import '../app/components/Lists/itemsList';
+@import '../app/components/Lists/excursionRequestItem';
 @import '../app/components/Modals/confirmModal';
 
 * {

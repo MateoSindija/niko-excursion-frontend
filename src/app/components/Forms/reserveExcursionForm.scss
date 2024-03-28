@@ -8,10 +8,23 @@
   box-sizing: border-box;
   background-color: white;
 
+  &__hours {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+
+    button {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
   &__price {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+
     &__info {
       margin-left: 10px;
 
@@ -25,6 +38,11 @@
         font-size: 25px;
       }
     }
+  }
+
+  &__error {
+    color: red;
+    font-size: 13px;
   }
 
   &__title {
@@ -47,14 +65,24 @@
     font-weight: 600;
     padding: 20px 0;
     margin-top: 20px;
-    @include ripple-effect(#061138);
+
+    &:not(:disabled) {
+      @include ripple-effect(#2f50b9);
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.7;
+    }
   }
 
   label {
     margin-bottom: 5px;
   }
+
   input,
-  select {
+  select,
+  textarea {
     @include input;
     margin-bottom: 15px;
   }

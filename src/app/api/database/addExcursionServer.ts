@@ -17,6 +17,7 @@ import handleTitleImage from '@/app/utils/handleTitleImage';
 
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(initializeApp(firebaseConfig));
+
 function getImagesFromFormData(formData: FormData, key: string): File[] {
   const images: File[] = [];
 
@@ -43,6 +44,12 @@ export default async function addExcursionServer(
   const price = formData.get('price');
   const maxPersons = formData.get('maxPersons');
   const titleImage = formData.get('titleImage');
+  const isExcursionPublic = formData.get('isExcursionPublic');
+  let startingHours: string | undefined = JSON.parse(
+    formData.get('startingHours')?.toString() ?? '',
+  ).map((x: string) => {
+    return parseInt(x);
+  });
 
   const validatedFields = excursionSchema.safeParse({
     titleHr: titleHr,
@@ -53,6 +60,8 @@ export default async function addExcursionServer(
     price: price,
     maxPersons: maxPersons,
     titleImage: titleImage,
+    hours: startingHours,
+    isExcursionPublic: isExcursionPublic,
   });
 
   if (!validatedFields.success) {
@@ -77,6 +86,8 @@ export default async function addExcursionServer(
         titleImage: handleTitleImage(urlArray, validatedFields.data.titleImage),
         createdAt: new Date(),
         updatedAt: new Date(),
+        hours: validatedFields.data.hours,
+        isExcursionPublic: validatedFields.data.isExcursionPublic,
       });
       revalidatePath('/admin/new-excursion/[[...id]]', 'page');
       return !!docRef.id;

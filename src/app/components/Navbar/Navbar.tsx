@@ -16,6 +16,7 @@ import { NavbarContext } from '@/app/utils/contexts';
 import { EMAIL, PHONE_NUMBER } from '@/constants/contact';
 import PhoneIcon from '@/app/utils/vectors/PhoneIcon';
 import MailIcon from '@/app/utils/vectors/MailIcon';
+import { CSSTransition } from 'react-transition-group';
 
 interface IProps {
   lang: Locale;
