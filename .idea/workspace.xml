@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Fixed photos and login key">
+    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Centered Images in carousel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/GalleryCarousel/gallery.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/GalleryCarousel/gallery.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionsCarousel/excursionCarousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionsCarousel/excursionCarousel.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +170,7 @@
       <workItem from="1712831380223" duration="7122000" />
       <workItem from="1712994776349" duration="5763000" />
       <workItem from="1713427269563" duration="13526000" />
-      <workItem from="1713688127566" duration="10927000" />
+      <workItem from="1713688127566" duration="11362000" />
     </task>
     <task id="LOCAL−00001" summary="Fixed IExcursion not found error">
       <option name="closed" value="true" />
@@ -214,7 +214,14 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1713697087752</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="Centered Images in carousel">
+      <option name="closed" value="true" />
+      <created>1713702636985</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1713702636985</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +245,7 @@
     <MESSAGE value="Added excursion reserve form" />
     <MESSAGE value="Fixed excursion photo carousel and added carousel for front page" />
     <MESSAGE value="Fixed photos and login key" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed photos and login key" />
+    <MESSAGE value="Centered Images in carousel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Centered Images in carousel" />
   </component>
 </project>
