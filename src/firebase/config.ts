@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { getApps, initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
-import admin from 'firebase-admin';
+
 import {
   browserLocalPersistence,
   indexedDBLocalPersistence,

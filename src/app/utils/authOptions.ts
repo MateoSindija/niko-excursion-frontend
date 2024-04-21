@@ -8,7 +8,6 @@ import {
   updateCurrentUser,
 } from '@firebase/auth';
 import { NextAuthOptions } from 'next-auth';
-import { FirestoreAdapter } from '@next-auth/firebase-adapter';
 
 export const authOptions: NextAuthOptions = {
   session: {
@@ -45,5 +44,4 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
-  adapter: FirestoreAdapter(app),
 };

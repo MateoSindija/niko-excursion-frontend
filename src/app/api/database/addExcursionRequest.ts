@@ -14,9 +14,6 @@ import handleTitleImage from '@/app/utils/handleTitleImage';
 import z, { boolean } from 'zod';
 import getExcursions from '@/app/api/database/getExcursions';
 import { IExcursion } from '@/interfaces/excursion.model';
-import { auth } from 'firebase-admin';
-import { getAuth } from '@firebase/auth';
-import { getStorage } from 'firebase/storage';
 import calculatePrice from '@/app/utils/calculatePrice';
 
 // Initialize Cloud Firestore and get a reference to the service

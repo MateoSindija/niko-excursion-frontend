@@ -1,12 +1,5 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import getRequestedExcursions from '@/app/api/database/getRequestedExcursions';
-import formatDate from '@/app/utils/formatDate';
-import ConfirmModal from '@/app/components/Modals/ConfirmModal';
-import ExcursionRequestItem from '@/app/components/Lists/ExcursionRequestItem';
-import { collection, getCountFromServer } from '@firebase/firestore';
-import getCollectionCount from '@/app/api/database/getCollectionCount';
-import PaginationControl from '@/app/components/PaginationControl/PaginationControl';
-import { IExcursion, IExcursionRequest } from '@/interfaces/excursion.model';
 import ExcursionsRequestsList from '@/app/components/Lists/ExcursionsRequestsList';
 
 const getData = async (lastDocId?: string) => {
@@ -16,11 +9,7 @@ const getData = async (lastDocId?: string) => {
   }
   return await getRequestedExcursions({});
 };
-const Page = async ({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
-}) => {
+const Page = async () => {
   const requestedExcursions = await getData();
 
   return (

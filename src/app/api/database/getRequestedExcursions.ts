@@ -14,11 +14,8 @@ import {
   startAt,
   where,
 } from '@firebase/firestore';
-import { initializeApp } from 'firebase/app';
 import app, { firebaseConfig } from '@/firebase/config';
 import { IExcursionRequest } from '@/interfaces/excursion.model';
-import { google } from 'google-gax/build/protos/compute_operations';
-import IError = google.cloud.compute.v1.IError;
 
 interface IParams {
   perPage?: number;

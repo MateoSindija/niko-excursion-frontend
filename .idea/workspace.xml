@@ -4,74 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Fixed excursion photo carousel and added carousel for front page">
-      <change afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
+    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Fixed photos and login key">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/x_icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/x_icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/contact/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/excursionPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/excursionPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/(logged)/calendar/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/(logged)/calendar/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/(logged)/excursions/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/(logged)/excursions/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/(logged)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/(logged)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/(logged)/new-excursion/[[...id]]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/(logged)/new-excursion/[[...id]]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/admin/(logged)/requested-excursions/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/(logged)/requested-excursions/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/(login)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/(login)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/(login)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/(login)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/auth/[...nextauth]/route.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/api/database/addExcursionRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/addExcursionRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/addExcursionServer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/addExcursionServer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/blockSelectedHours.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/blockSelectedHours.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/deleteExcursion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/deleteExcursion.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/deleteImageFromStorage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/deleteImageFromStorage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/getBlockedHoursForDay.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/getBlockedHoursForDay.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/getCollectionCount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/getCollectionCount.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/getDocumentsWithoutGivenId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/getDocumentsWithoutGivenId.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/getExcursions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/getExcursions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/getMostExpensiveExcursions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/getMostExpensiveExcursions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/api/database/getRequestedExcursions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/getRequestedExcursions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/handleExcursionRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/handleExcursionRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/storageUpload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/storageUpload.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/updateExcursion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/updateExcursion.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/resend/sendExcursionScheduleEmail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/resend/sendExcursionScheduleEmail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Animations/Loading.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Buttons/SignOutButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Buttons/SignOutButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Buttons/hourButton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Buttons/hourButton.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Calendar/CalendarAndTime.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Calendar/CalendarAndTime.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCardSmall.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCardSmall.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/excursionCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/excursionCard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/excursionCardSmall.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/excursionCardSmall.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/GalleryCarousel/Gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/GalleryCarousel/Gallery.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/PromoCarousel/promoCarousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/PromoCarousel/promoCarousel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Containers/SecondaryPagesContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Containers/SecondaryPagesContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/EmailTemplates/ExcursionScheduleEmail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/EmailTemplates/ExcursionScheduleEmail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/ExcursionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/ExcursionForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/ReserveExcursionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/ReserveExcursionForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/excursionForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/excursionForm.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/loginForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/loginForm.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/reserveExcursionForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/reserveExcursionForm.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Lists/ExcursionRequestItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Lists/ExcursionRequestItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Lists/excursionRequestItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Lists/excursionRequestItem.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Modals/ConfirmModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Modals/ConfirmModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar/AdminNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar/AdminNavbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/PaginationControl/PaginationControl.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/PaginationControl/PaginationControl.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/utils/authOptions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/authOptions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/contact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/contact.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dictionaries/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dictionaries/hr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/hr.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/firebase/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/excursion.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/excursion.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/abstracts/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/abstracts/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/zod/excursionSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/zod/excursionSchema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +177,7 @@
       <workItem from="1712831380223" duration="7122000" />
       <workItem from="1712994776349" duration="5763000" />
       <workItem from="1713427269563" duration="13526000" />
-      <workItem from="1713688127566" duration="7153000" />
+      <workItem from="1713688127566" duration="9010000" />
     </task>
     <task id="LOCAL−00001" summary="Fixed IExcursion not found error">
       <option name="closed" value="true" />
@@ -273,7 +214,14 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1711032900573</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Fixed photos and login key">
+      <option name="closed" value="true" />
+      <created>1713697087752</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1713697087752</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +244,7 @@
     <MESSAGE value="Fixed env public key" />
     <MESSAGE value="Added excursion reserve form" />
     <MESSAGE value="Fixed excursion photo carousel and added carousel for front page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed excursion photo carousel and added carousel for front page" />
+    <MESSAGE value="Fixed photos and login key" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed photos and login key" />
   </component>
 </project>
