@@ -17,7 +17,9 @@
   }
 
   &__slide {
+    display: flex;
     flex: 0 0 auto;
+    justify-content: center;
     padding-left: 1rem;
     position: relative;
   }
