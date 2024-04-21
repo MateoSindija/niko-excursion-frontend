@@ -42,5 +42,15 @@
     @include ripple-effect($lighter-blue);
     color: white;
     text-transform: uppercase;
+    &:disabled {
+      cursor: default;
+      background: lighten($lighter-blue, 20%) !important;
+      &:hover {
+        background: lighten($lighter-blue, 20%) !important;
+      }
+      &:active {
+        background: lighten($lighter-blue, 20%) !important;
+      }
+    }
   }
 }

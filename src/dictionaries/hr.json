@@ -44,12 +44,18 @@
     "hours": "Sata",
     "persons": "Osobe",
     "button": "Više Detalja",
-    "price": "Cijena"
+    "price": "Cijena",
+    "type": "Vrsta",
+    "public": "Javna",
+    "private": "Privatna"
   },
   "excursionCardSmall": {
     "price": "Cijena",
     "maxPerson": "Max Osoba:",
-    "duration": "Trajanje:"
+    "duration": "Trajanje:",
+    "public": "Javna",
+    "private": "Privatna",
+    "type": "Vrsta:"
   },
   "excursionPage": {
     "title": "Rezervirajte svoju eskurziju",
@@ -57,7 +63,10 @@
     "overview": "Pregled eskurzije",
     "included": "Uključeno u vaš put",
     "maxPerson": "Max Osoba:",
-    "other": "Ostale Eskurzije",
+    "other": "Slične Eskurzije",
+    "type": "Vrsta",
+    "public": "Javna",
+    "private": "Privatna",
     "includedItems": [
       {
         "title": "Smještaj",
@@ -65,7 +74,9 @@
       }
     ],
     "bookTour": {
-      "price": "Cijena",
+      "totalPrice": "Ukupna Cijena",
+      "pricePrivate": "Cijena eskurzije",
+      "pricePublic": "Cijena po osobi",
       "title": "Rezervirajte svoju eskurziju",
       "name": "Vaše ime",
       "phone": "Vaš broj mobitela",
@@ -78,7 +89,7 @@
       "noAvailableTime": "Nažalost odabrani dan je potpuno zauzet",
       "error": "Nešto je pošlo po krivu! Molimo pokušajte kasnije",
       "success": {
-        "message": "Hvala na rezervaciji termina! Očekujte naš kontakt uskoro putem telefona ili e-maila za potvrdu termina."
+        "message": "Hvala na rezervaciji termina! Očekujte naš odgovor uskoro putem telefona ili e-maila za potvrdu termina."
       }
     }
   },

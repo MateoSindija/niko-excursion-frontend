@@ -11,7 +11,8 @@ interface IProps {
 }
 
 const ExcursionCardSmall = async ({ excursion, lang }: IProps) => {
-  const { id, titleImage, price, titleEn, titleHr } = excursion;
+  const { id, titleImage, price, titleEn, titleHr, isExcursionPublic } =
+    excursion;
   const { excursionCardSmall } = await getDictionary(lang);
 
   const handleLink = () => {
@@ -20,7 +21,13 @@ const ExcursionCardSmall = async ({ excursion, lang }: IProps) => {
   return (
     <div className="excursionCardSm">
       <Link href={handleLink()} className="excursionCardSm__imgLink">
-        <Image src={titleImage} width={310} height={230} alt={'title'} />
+        <Image
+          src={titleImage}
+          width={350}
+          height={260}
+          sizes="(max-width: 350px) 320px 240px"
+          alt={'title'}
+        />
         <div className="excursionCardSm__imgLink__priceContainer">
           <div className="excursionCardSm__imgLink__priceContainer__title">
             {excursionCardSmall.price}
@@ -34,10 +41,17 @@ const ExcursionCardSmall = async ({ excursion, lang }: IProps) => {
           {lang === 'hr' ? titleHr : titleEn}
         </Link>
         <div className="excursionCardSm__content__info">
-          <Image src="/clock_duration.svg" width={18} height={18} alt="clock" />
-          {`${excursionCardSmall.duration} ${excursion?.duration} ${
-            lang === 'hr' ? 'Sata' : 'Hours'
-          }`}
+          <div className="excursionCardSm__content__info__container">
+            <Image
+              src="/clock_duration.svg"
+              width={18}
+              height={18}
+              alt="clock"
+            />
+            {`${excursionCardSmall.duration} ${excursion?.duration} ${
+              lang === 'hr' ? 'Sata' : 'Hours'
+            }`}
+          </div>
           <Image
             src="/horizontal_line.svg"
             alt="line"
@@ -45,8 +59,30 @@ const ExcursionCardSmall = async ({ excursion, lang }: IProps) => {
             height={18}
             className="excursionPage__firstCol__subHeader__line"
           />
-          <Image src="/person.svg" width={18} height={18} alt="clock" />
-          {`${excursionCardSmall?.maxPerson} ${excursion?.maxPersons}`}
+          <div className="excursionCardSm__content__info__container">
+            <Image src="/person.svg" width={18} height={18} alt="clock" />
+            {`${excursionCardSmall?.maxPerson} ${excursion?.maxPersons}`}
+          </div>
+          <Image
+            src="/horizontal_line.svg"
+            alt="line"
+            width={5}
+            height={18}
+            className="excursionPage__firstCol__subHeader__line"
+          />
+          <div className="excursionCardSm__content__info__container">
+            <Image
+              src="/speed_boat.svg"
+              alt={'boat'}
+              height={18 + 5}
+              width={18 + 5}
+            />
+            <span>{`${excursionCardSmall.type} ${
+              excursion.isExcursionPublic
+                ? excursionCardSmall.public
+                : excursionCardSmall.private
+            }`}</span>
+          </div>
         </div>
       </div>
     </div>

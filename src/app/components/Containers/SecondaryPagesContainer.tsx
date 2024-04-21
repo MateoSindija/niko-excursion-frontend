@@ -11,7 +11,7 @@ const SecondaryPagesContainer = ({ children, title, bgColor }: IProps) => {
     <div className="pageContainer" style={{ backgroundColor: bgColor }}>
       <div className="pageContainer__banner">
         <h1 className="pageContainer__banner__title">{title}</h1>
-        <Image src="/boat-cropped.jpg" fill alt="boat" priority />
+        <Image src="/boat_header.jpg" fill alt="boat" priority />
       </div>
       <div className="pageContainer__content">{children}</div>
     </div>

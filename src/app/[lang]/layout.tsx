@@ -6,9 +6,6 @@ import { i18n, Locale } from 'i18n.config';
 import Footer from '@/app/components/Footer/Footer';
 import { getDictionary } from '@/app/[lang]/dictionaries';
 import NavbarDictionaryProvider from '@/app/utils/contexts';
-import reviews from '@/app/components/Carousels/ReviewsCarousel/Reviews';
-import dynamic from 'next/dynamic';
-import Loading from '@/app/components/Animations/Loading';
 
 export const metadata: Metadata = {
   title: 'Boat Excursion Niko',

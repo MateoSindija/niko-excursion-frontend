@@ -14,6 +14,7 @@ import { useGetBlockedHours } from '@/hooks/useGetBlockedHours';
 import HourButton from '@/app/components/Buttons/HourButton';
 import addExcursionRequest from '@/app/api/database/addExcursionRequest';
 import { da } from 'date-fns/locale';
+import calculatePrice from '@/app/utils/calculatePrice';
 
 interface IProps {
   price: number;
@@ -21,7 +22,9 @@ interface IProps {
   excursionName: string;
   id: string;
   text: {
-    price: string;
+    totalPrice: string;
+    pricePrivate: string;
+    pricePublic: string;
     title: string;
     name: string;
     phone: string;
@@ -53,7 +56,7 @@ const ReserveExcursionForm = (props: IProps) => {
     id,
   } = props;
   const workingHours = Array.from(
-    { length: 22 - 9 + 1 },
+    { length: 20 - 9 + 1 },
     (_, index) => 9 + index,
   );
 
@@ -89,6 +92,21 @@ const ReserveExcursionForm = (props: IProps) => {
   );
   const handleDisabled = () => {
     return isHoursLoading || isSubmitting;
+  };
+  const handleDisabledHour = (hour: number) => {
+    const currentDate = new Date();
+    const selectedDate = watch('date');
+    let isHourLater = false;
+
+    if (
+      selectedDate.getFullYear() === currentDate.getFullYear() &&
+      selectedDate.getMonth() === currentDate.getMonth() &&
+      currentDate.getDate() === selectedDate.getDate() &&
+      selectedDate.getHours() >= hour
+    ) {
+      isHourLater = true;
+    }
+    return isHoursLoading || isSubmitting || isHourLater;
   };
 
   useEffect(() => {
@@ -134,6 +152,7 @@ const ReserveExcursionForm = (props: IProps) => {
       excursionName,
       data.passengers,
       selectedDepartureHour,
+      calculatePrice(price, isExcursionPublic, data.passengers),
     );
 
     if (isSuccess && status) {
@@ -157,7 +176,7 @@ const ReserveExcursionForm = (props: IProps) => {
             />
             <div className="reserveForm__price__info">
               <div className="reserveForm__price__info__title">
-                {text.price}
+                {isExcursionPublic ? text.pricePublic : text.pricePrivate}
               </div>
               <div className="reserveForm__price__info__value">{`${price} €`}</div>
             </div>
@@ -206,48 +225,28 @@ const ReserveExcursionForm = (props: IProps) => {
             <div className="reserveForm__error">{errors.date.message}</div>
           )}
           <label>{text.chooseTime}</label>
+          <div className="reserveForm__hours">
+            {excursionStartingHours?.every((el) =>
+              blockedHours.includes(el),
+            ) ? (
+              <div>{text.noAvailableTime}</div>
+            ) : (
+              excursionStartingHours?.map((hour, index) => {
+                if (!blockedHours.includes(hour)) {
+                  return (
+                    <HourButton
+                      key={index}
+                      hour={hour}
+                      selectedButton={selectedDepartureHour}
+                      handleDisabled={() => handleDisabledHour(hour)}
+                      handleClick={handleHourClick}
+                    />
+                  );
+                }
+              })
+            )}
+          </div>
 
-          {isExcursionPublic ? (
-            <div className="reserveForm__hours">
-              {blockedHours.length === workingHours.length ? (
-                <div>{text.noAvailableTime}</div>
-              ) : (
-                excursionStartingHours?.map((hour, index) => {
-                  if (!blockedHours.includes(hour)) {
-                    return (
-                      <HourButton
-                        key={index}
-                        hour={hour}
-                        selectedButton={selectedDepartureHour}
-                        handleDisabled={() => handleDisabled()}
-                        handleClick={handleHourClick}
-                      />
-                    );
-                  }
-                })
-              )}
-            </div>
-          ) : (
-            <div className="reserveForm__hours">
-              {blockedHours.length === workingHours.length ? (
-                <div className="reserveForm__error">{text.noAvailableTime}</div>
-              ) : (
-                workingHours.map((hour, index) => {
-                  if (!blockedHours.includes(hour)) {
-                    return (
-                      <HourButton
-                        key={index}
-                        hour={hour}
-                        selectedButton={selectedDepartureHour}
-                        handleDisabled={() => handleDisabled()}
-                        handleClick={handleHourClick}
-                      />
-                    );
-                  }
-                })
-              )}
-            </div>
-          )}
           {errors.root && errors.root['hour'] && (
             <div className="reserveForm__error">
               {errors.root['hour'].message}
@@ -282,6 +281,13 @@ const ReserveExcursionForm = (props: IProps) => {
           {errors.message && (
             <div className="reserveForm__error">{errors.message.message}</div>
           )}
+          <div className="reserveForm__total">
+            <span>{text.totalPrice}</span>
+            <span className="reserveForm__total__price">
+              {calculatePrice(price, isExcursionPublic, watch('passengers')) +
+                '€'}
+            </span>
+          </div>
           <button className="reserveForm__button" disabled={handleDisabled()}>
             {text.button}
           </button>

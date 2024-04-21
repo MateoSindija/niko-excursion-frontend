@@ -4,11 +4,12 @@ import { getDictionary } from '@/app/[lang]/dictionaries';
 import SecondaryPagesContainer from '@/app/components/Containers/SecondaryPagesContainer';
 import getExcursions from '@/app/api/database/getExcursions';
 import ExcursionCard from '@/app/components/Cards/ExcursionCard';
-import Loading from '@/app/components/Animations/Loading';
+
 import { wait } from 'next/dist/lib/wait';
 import ReactSwitch from 'react-switch';
 import ToggleButton from '@/app/components/Buttons/ToggleButton';
 import { redirect } from 'next/navigation';
+import Loading from '@/app/[lang]/loading';
 
 const Page = async ({
   params: { lang },
@@ -41,16 +42,17 @@ const Page = async ({
             {excursionsListText.toggleFilter.desc}
           </div>
         </div>
-
-        {excursions.map((excursion) => {
-          return (
-            <ExcursionCard
-              excursion={excursion}
-              lang={lang}
-              key={excursion.id}
-            />
-          );
-        })}
+        <Suspense fallback={<Loading />}>
+          {excursions.map((excursion) => {
+            return (
+              <ExcursionCard
+                excursion={excursion}
+                lang={lang}
+                key={excursion.id}
+              />
+            );
+          })}
+        </Suspense>
       </div>
     </SecondaryPagesContainer>
   );

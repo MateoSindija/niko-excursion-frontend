@@ -1,12 +1,10 @@
-'use server';
 import React from 'react';
 import { deleteDoc, doc, getDoc, getFirestore } from '@firebase/firestore';
 import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '@/firebase/config';
+import app, { firebaseConfig } from '@/firebase/config';
 import { deleteObject, getStorage, ref } from 'firebase/storage';
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(initializeApp(firebaseConfig));
+const db = getFirestore(app);
 const deleteExcursion = async (id: string) => {
   const docRef = doc(db, 'Excursion', id);
   const storage = getStorage(app);

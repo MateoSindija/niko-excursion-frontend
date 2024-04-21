@@ -1,0 +1,21 @@
+.activeLink {
+  background-color: lightgrey;
+}
+
+.paginationControl {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 30px 0;
+  column-gap: 15px;
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid $cool-grey;
+    @include ripple-effect(white);
+  }
+}

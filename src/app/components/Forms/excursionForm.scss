@@ -110,6 +110,10 @@
       text-transform: uppercase;
       border-radius: 12px;
       @include ripple-effect($lighter-blue);
+      &:disabled {
+        cursor: default;
+        background-color: $lighter-blue !important;
+      }
     }
   }
 }

@@ -40,6 +40,18 @@
     }
   }
 
+  &__total {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__price {
+      font-family: 'Playfair Display', sans-serif;
+      font-size: 20px;
+    }
+  }
+
   &__error {
     color: red;
     font-size: 13px;

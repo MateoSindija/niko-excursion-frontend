@@ -5,6 +5,7 @@
 @import '../app/components/Navbar/navbar';
 @import '../app/components/Navbar/adminNavbar';
 @import '../app/components/Footer/footer';
+@import '../app/components/Animations/animatedLoading';
 @import '../app/components/Buttons/sociaMediaButton';
 @import '../app/components/Buttons/languageButton';
 @import '../app/components/Buttons/carouselControllerButton';
@@ -25,6 +26,7 @@
 @import '../app/components/Cards/excursionCard';
 @import '../app/components/Cards/excursionCardSmall';
 @import '../app/components/Calendar/calendarAndTime';
+@import '../app/components/PaginationControl/paginationControl';
 @import '../app/[lang]/contact/contactPage';
 @import '../app/[lang]/about-us/aboutUsPage';
 @import '../app/[lang]/tours/tours';

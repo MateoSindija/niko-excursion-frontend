@@ -1,5 +1,3 @@
-'use server';
-
 import imagesUpload from '@/app/api/database/storageUpload';
 import {
   addDoc,
@@ -11,13 +9,15 @@ import {
   updateDoc,
 } from '@firebase/firestore';
 import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '@/firebase/config';
+import app, { firebaseConfig } from '@/firebase/config';
 import { revalidatePath } from 'next/cache';
 import { excursionSchema } from '@/zod/excursionSchema';
 import handleTitleImage from '@/app/utils/handleTitleImage';
+import z from 'zod';
+import { getAuth } from '@firebase/auth';
 
 // Initialize Cloud Firestore and get a reference to the service
-const db = getFirestore(initializeApp(firebaseConfig));
+const db = getFirestore(app);
 function getImagesFromFormData(formData: FormData, key: string): File[] {
   const images: File[] = [];
 
@@ -45,6 +45,11 @@ export default async function updateExcursion(
   const price = formData.get('price');
   const maxPersons = formData.get('maxPersons');
   const titleImage = formData.get('titleImage');
+  let startingHours: string | undefined = JSON.parse(
+    formData.get('startingHours')?.toString() ?? '',
+  ).map((x: string) => {
+    return parseInt(x);
+  });
 
   const validatedFields = excursionSchema.safeParse({
     titleHr: titleHr,
@@ -53,6 +58,7 @@ export default async function updateExcursion(
     descCro: descCro,
     descEng: descEng,
     price: price,
+    hours: startingHours,
     maxPersons: maxPersons,
     titleImage: titleImage,
   });
@@ -77,10 +83,11 @@ export default async function updateExcursion(
       descriptionEng: validatedFields.data.descEng,
       maxPersons: validatedFields.data.maxPersons,
       price: validatedFields.data.price,
+      hours: validatedFields.data.hours,
       titleImage: handleTitleImage(urlArray, validatedFields.data.titleImage),
       updatedAt: new Date(),
     });
-    revalidatePath('/admin/new-excursion/[[...id]]', 'page');
+    // revalidatePath('/admin/new-excursion/[[...id]]', 'page');
     return true;
   } catch (e) {
     console.log(e);

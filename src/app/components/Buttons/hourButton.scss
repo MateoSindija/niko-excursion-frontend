@@ -16,6 +16,13 @@
   border-radius: 6px;
 
   @include ripple-effect($orange-color);
+  &:disabled {
+    background-color: lightgrey !important;
+    border: 2px solid lightgrey !important;
+    opacity: 0.7;
+    color: white !important;
+    cursor: default;
+  }
 
   &:hover {
     color: white;

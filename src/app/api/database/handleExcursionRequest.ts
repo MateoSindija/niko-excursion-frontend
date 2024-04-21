@@ -1,7 +1,6 @@
-'use server';
 import { doc, getFirestore, updateDoc } from '@firebase/firestore';
 import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '@/firebase/config';
+import app, { firebaseConfig } from '@/firebase/config';
 import { IExcursion } from '@/interfaces/excursion.model';
 import getExcursions from '@/app/api/database/getExcursions';
 import blockSelectedHours from '@/app/api/database/blockSelectedHours';
@@ -9,7 +8,7 @@ import getRequestedExcursions from '@/app/api/database/getRequestedExcursions';
 import formatDate from '@/app/utils/formatDate';
 import { revalidatePath } from 'next/cache';
 
-const db = getFirestore(initializeApp(firebaseConfig));
+const db = getFirestore(app);
 
 const handleExcursionRequest = async (
   confirmed: boolean,
@@ -52,7 +51,7 @@ const handleExcursionRequest = async (
       isApproved: 'refused',
     });
   }
-  revalidatePath('/admin/requested-excursions', 'page');
+  // revalidatePath('/admin/requested-excursions', 'page');
 };
 
 export default handleExcursionRequest;

@@ -44,12 +44,18 @@
     "hours": "Hours",
     "persons": "Persons",
     "button": "More Details",
-    "price": "Price"
+    "price": "Price",
+    "type": "Type",
+    "public": "Public",
+    "private": "Private"
   },
   "excursionCardSmall": {
     "price": "Price",
     "maxPerson": "Max Persons:",
-    "duration": "Duration:"
+    "duration": "Duration:",
+    "public": "Public",
+    "private": "Private",
+    "type": "Type:"
   },
   "excursionPage": {
     "title": "Book your tour",
@@ -57,7 +63,10 @@
     "maxPerson": "Max Persons:",
     "overview": "Excursion Overview",
     "included": "Included in your trip",
-    "other": "Other Excursions",
+    "other": "Similar Excursions",
+    "type": "Type",
+    "public": "Public",
+    "private": "Private",
     "includedItems": [
       {
         "title": "Accommodation",
@@ -65,7 +74,9 @@
       }
     ],
     "bookTour": {
-      "price": "Price",
+      "totalPrice": "Total Price",
+      "pricePrivate": "Price of excursion",
+      "pricePublic": "Price per person",
       "title": "Book your tour",
       "name": "Your name",
       "phone": "Your phone number",

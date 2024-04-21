@@ -1,37 +1,26 @@
-'use server';
-
 import imagesUpload from '@/app/api/database/storageUpload';
 import {
   addDoc,
   collection,
   doc,
   getFirestore,
+  // getFirestore,
   setDoc,
 } from '@firebase/firestore';
-import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '@/firebase/config';
-import { revalidatePath } from 'next/cache';
-import { contactSchema } from '@/zod/contactSchema';
+
+import app, { firebaseConfig } from '@/firebase/config';
 import { excursionReserveSchema, excursionSchema } from '@/zod/excursionSchema';
 import handleTitleImage from '@/app/utils/handleTitleImage';
 import z, { boolean } from 'zod';
 import getExcursions from '@/app/api/database/getExcursions';
 import { IExcursion } from '@/interfaces/excursion.model';
+import { auth } from 'firebase-admin';
+import { getAuth } from '@firebase/auth';
+import { getStorage } from 'firebase/storage';
+import calculatePrice from '@/app/utils/calculatePrice';
 
 // Initialize Cloud Firestore and get a reference to the service
-const db = getFirestore(initializeApp(firebaseConfig));
-
-const calculatePrice = (
-  price: number,
-  isExcursionPublic: boolean,
-  passengerNumber: number,
-) => {
-  if (isExcursionPublic) {
-    return price * passengerNumber;
-  }
-
-  return price;
-};
+const db = getFirestore(app);
 export default async function addExcursionRequest(
   formData: FormData,
   date: Date,
@@ -54,7 +43,7 @@ export default async function addExcursionRequest(
     passengers: passengerNumber,
   });
 
-  const excursionHourSchema = z.coerce.number().min(9).max(22);
+  const excursionHourSchema = z.coerce.number().min(9).max(20);
   const validateHour = excursionHourSchema.safeParse(departureHour);
 
   if (!validatedFields.success || !validateHour.success) {

@@ -1,5 +1,3 @@
-'use server';
-
 import imagesUpload from '@/app/api/database/storageUpload';
 import {
   addDoc,
@@ -9,14 +7,17 @@ import {
   setDoc,
 } from '@firebase/firestore';
 import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '@/firebase/config';
+import app, { firebaseConfig } from '@/firebase/config';
 import { revalidatePath } from 'next/cache';
 import { contactSchema } from '@/zod/contactSchema';
 import { excursionSchema } from '@/zod/excursionSchema';
 import handleTitleImage from '@/app/utils/handleTitleImage';
+import { getAuth } from '@firebase/auth';
+import { getStorage } from 'firebase/storage';
+import { getSession } from 'next-auth/react';
 
 // Initialize Cloud Firestore and get a reference to the service
-const db = getFirestore(initializeApp(firebaseConfig));
+const db = getFirestore(app);
 
 function getImagesFromFormData(formData: FormData, key: string): File[] {
   const images: File[] = [];
@@ -89,9 +90,10 @@ export default async function addExcursionServer(
         hours: validatedFields.data.hours,
         isExcursionPublic: validatedFields.data.isExcursionPublic,
       });
-      revalidatePath('/admin/new-excursion/[[...id]]', 'page');
+      // revalidatePath('/admin/new-excursion/[[...id]]', 'page');
       return !!docRef.id;
     } catch (e) {
+      console.log(e);
       return false;
     }
   } else {

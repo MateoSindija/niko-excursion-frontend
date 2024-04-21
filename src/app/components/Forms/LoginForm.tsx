@@ -7,32 +7,40 @@ import * as z from 'zod';
 import { loginSchema } from '@/zod/loginSchema';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { getAuth, signInWithEmailAndPassword } from '@firebase/auth';
+import app, { auth } from '@/firebase/config';
 
 type FormData = z.infer<typeof loginSchema>;
 const LoginForm = () => {
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const {
     handleSubmit,
     register,
     getValues,
-    formState: { errors, isSubmitting, isDirty, isValid },
+    formState: { errors, isSubmitting },
   } = useForm<FormData>({
     resolver: zodResolver(loginSchema),
   });
   const onSubmit = async () => {
     setIsError(false);
-    setIsLoading(true);
-    const res = await signIn('credentials', {
-      redirect: false,
-      email: getValues('email'),
-      password: getValues('password'),
-    });
-    setIsLoading(false);
-    if (res && !res.error) {
+
+    try {
+      const credential = await signInWithEmailAndPassword(
+        auth,
+        getValues('email'),
+        getValues('password'),
+      );
+      const idToken = await credential.user.getIdToken();
+      await fetch('/api/login', {
+        headers: {
+          Authorization: `Bearer ${idToken}`,
+        },
+      });
+
+      // Refresh page after updating browser cookies
       router.push('/admin/excursions');
-    } else {
+    } catch (e) {
       setIsError(true);
     }
   };
@@ -45,6 +53,7 @@ const LoginForm = () => {
           type="email"
           id="email"
           autoComplete="username"
+          disabled={isSubmitting}
           {...register('email')}
         />
         {errors.email && (
@@ -57,6 +66,7 @@ const LoginForm = () => {
           type="password"
           id="password"
           autoComplete="current-password"
+          disabled={isSubmitting}
           {...register('password')}
         />
         {errors.password && (
@@ -66,10 +76,15 @@ const LoginForm = () => {
       {isError && (
         <div className="loginForm__error">Pogrešan email ili lozinka!</div>
       )}
-      <button type="submit" className="loginForm__button" disabled={isLoading}>
+      <button
+        type="submit"
+        className="loginForm__button"
+        disabled={isSubmitting}
+      >
         Prijava
       </button>
       <Link href={'/'}>Povratak na glavnu stranicu</Link>
+      <Link href={'/admin/reset-password'}>Zaboravljena Lozinka</Link>
     </form>
   );
 };

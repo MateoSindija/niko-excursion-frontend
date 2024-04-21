@@ -1,6 +1,7 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDisableBodyScroll } from '@/hooks/useDisableBodyScroll';
+import { useDetectRef } from '@/hooks/useDetectRef';
 
 interface IProps {
   title: string;
@@ -18,11 +19,13 @@ const ConfirmModal = ({
   cancel = 'Prekid',
 }: IProps) => {
   const [isDisabled, setIsDisabled] = useState(false);
+  const ref = useRef(null);
   useDisableBodyScroll(true);
+  useDetectRef(ref, () => isModalOpen(false));
 
   return (
     <div className="overlay">
-      <div className="overlay__modal">
+      <div className="overlay__modal" ref={ref}>
         <h4>{title}</h4>
         <div className="overlay__modal__buttons">
           <button

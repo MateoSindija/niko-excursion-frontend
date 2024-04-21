@@ -9,13 +9,13 @@ import {
   where,
 } from '@firebase/firestore';
 import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '@/firebase/config';
+import app, { firebaseConfig } from '@/firebase/config';
 import { IExcursion } from '@/interfaces/excursion.model';
 
 const getDocumentsWithoutGivenId = async (
   idToExclude: string,
 ): Promise<IExcursion[] | []> => {
-  const db = getFirestore(initializeApp(firebaseConfig));
+  const db = getFirestore(app);
   const collectionRef = await collection(db, 'Excursion');
   const docs = await getDocs(
     query(collectionRef, where(documentId(), '!=', idToExclude), limit(3)),

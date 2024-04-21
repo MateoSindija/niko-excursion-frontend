@@ -11,8 +11,7 @@ import { ClipLoader } from 'react-spinners';
 import deleteImage from '@/app/api/database/deleteImageFromStorage';
 import updateExcursion from '@/app/api/database/updateExcursion';
 import { IExcursion } from '@/interfaces/excursion.model';
-import { Simulate } from 'react-dom/test-utils';
-import error = Simulate.error;
+import { useRouter } from 'next/navigation';
 
 type NewExcursionData = z.infer<typeof excursionSchema>;
 const ExcursionForm = (excursion: IExcursion | null) => {
@@ -23,8 +22,8 @@ const ExcursionForm = (excursion: IExcursion | null) => {
     isAdded: false,
     isFileListEmpty: false,
   });
-  const hours = Array.from({ length: 22 - 9 + 1 }, (_, index) => 9 + index);
-
+  const hours = Array.from({ length: 20 - 9 + 1 }, (_, index) => 9 + index);
+  const router = useRouter();
   const {
     reset,
     handleSubmit,
@@ -63,10 +62,12 @@ const ExcursionForm = (excursion: IExcursion | null) => {
       hours: excursion?.hours,
     });
   }, [excursion]);
-
   const deleteImageFromStorage = async (imageUrl: string) => {
     setExcursionStatus({ ...excursionStatus, isAdding: true });
-    if (excursion?.id) await deleteImage(imageUrl, excursion?.id);
+    if (excursion?.id) {
+      await deleteImage(imageUrl, excursion?.id);
+      router.refresh();
+    }
     setExcursionStatus({ ...excursionStatus, isAdding: false });
   };
   const blobToFile = (theBlob: Blob, fileName: string): File => {
@@ -134,6 +135,7 @@ const ExcursionForm = (excursion: IExcursion | null) => {
     } else {
       status = await updateExcursion(excursion.id, formData, imagesFormData);
     }
+
     if (status) {
       setCompressedFiles([]);
       setExcursionStatus({
@@ -142,6 +144,7 @@ const ExcursionForm = (excursion: IExcursion | null) => {
         isAdded: true,
       });
       reset();
+      router.refresh();
     } else {
       setExcursionStatus({ ...excursionStatus, isAdding: false, error: true });
     }
@@ -337,34 +340,38 @@ const ExcursionForm = (excursion: IExcursion | null) => {
             </div>
           )}
         </div>
-        {watch('isExcursionPublic') && (
-          <>
-            <div>U koliko sati eksurzija kreće</div>
-            <fieldset className="newExcursionForm__form__multipleCheckboxes">
-              {hours.map((hour) => {
-                return (
-                  <div
-                    className="newExcursionForm__form__multipleCheckboxes__hours"
-                    key={hour}
-                  >
-                    <label htmlFor={hour.toString()}>{`${hour}:00`}</label>
-                    <input
-                      type="checkbox"
-                      id={hour.toString()}
-                      value={hour}
-                      {...register(`hours`)}
-                    />
-                  </div>
-                );
-              })}
-              {watch('hours')?.length === 0 && (
-                <div className="newExcursionForm__form__inputContainer__error">
-                  Odaberite barem jedno početno vrijeme
-                </div>
-              )}
-            </fieldset>
-          </>
+
+        <div>U koliko sati eksurzija kreće</div>
+        <fieldset className="newExcursionForm__form__multipleCheckboxes">
+          {hours.map((hour) => {
+            return (
+              <div
+                className="newExcursionForm__form__multipleCheckboxes__hours"
+                key={hour}
+              >
+                <label htmlFor={hour.toString()}>{`${hour}:00`}</label>
+                <input
+                  type="checkbox"
+                  id={hour.toString()}
+                  disabled={excursionStatus.isAdding}
+                  defaultChecked={
+                    getValues('hours')
+                      ? getValues('hours')?.includes(hour)
+                      : false
+                  }
+                  value={hour}
+                  {...register(`hours`)}
+                />
+              </div>
+            );
+          })}
+        </fieldset>
+        {watch('hours')?.length === 0 && (
+          <div className="newExcursionForm__form__inputContainer__error">
+            Odaberite barem jedno početno vrijeme
+          </div>
         )}
+
         <div className="newExcursionForm__form__inputContainer">
           <label htmlFor="photos">Fotografije</label>
           <input
@@ -455,6 +462,7 @@ const ExcursionForm = (excursion: IExcursion | null) => {
             );
           })}
         </div>
+
         <button
           className="newExcursionForm__form__submit"
           type="submit"
@@ -472,9 +480,13 @@ const ExcursionForm = (excursion: IExcursion | null) => {
             'Dodaj eskurziju'
           )}
         </button>
-        {excursionStatus.isFileListEmpty && (
-          <div>Molimo dodajte barem jednu fotografiju</div>
-        )}
+
+        {excursionStatus.isFileListEmpty ||
+          (errors.titleImage && (
+            <div>
+              Molimo dodajte barem jednu fotografiju i odaberite naslovnu
+            </div>
+          ))}
         {excursionStatus.isAdded && (
           <div>
             {excursion?.id

@@ -1,14 +1,13 @@
-'use server';
 import {
   collection,
   getCountFromServer,
   getFirestore,
 } from '@firebase/firestore';
 import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '@/firebase/config';
+import app, { firebaseConfig } from '@/firebase/config';
 
 const getCollectionCount = async (collectionName: string) => {
-  const db = getFirestore(initializeApp(firebaseConfig));
+  const db = getFirestore(app);
   const collectionRef = collection(db, collectionName);
   const snapshotCount = await getCountFromServer(collectionRef);
 

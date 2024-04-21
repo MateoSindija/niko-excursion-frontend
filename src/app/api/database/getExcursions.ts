@@ -1,4 +1,3 @@
-'use server';
 import {
   collection,
   doc,
@@ -8,16 +7,15 @@ import {
   query,
   where,
 } from '@firebase/firestore';
-import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '@/firebase/config';
+import app, { auth, firebaseConfig } from '@/firebase/config';
 import { IExcursion } from '@/interfaces/excursion.model';
-import { ca } from 'date-fns/locale';
+import { initializeApp } from 'firebase/app';
 
 const getExcursions = async (props?: {
   id?: string | null;
   type?: 'private' | 'public';
 }): Promise<IExcursion[] | []> => {
-  const db = getFirestore(initializeApp(firebaseConfig));
+  const db = getFirestore(app);
   const { id, type } = props ?? {};
 
   try {

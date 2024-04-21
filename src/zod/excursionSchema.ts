@@ -45,8 +45,7 @@ export const excursionSchema = z.object({
     .refine((val) => val.length > 0, {
       message: 'Hours must have at least one number in array',
       path: ['hours'],
-    })
-    .optional(),
+    }),
 });
 
 export const excursionReserveSchema = z.object({

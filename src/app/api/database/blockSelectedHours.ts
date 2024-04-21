@@ -1,4 +1,3 @@
-'use server';
 import {
   addDoc,
   arrayRemove,
@@ -10,14 +9,14 @@ import {
   updateDoc,
 } from '@firebase/firestore';
 import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '@/firebase/config';
+import app, { firebaseConfig } from '@/firebase/config';
 
 const blockSelectedHours = async (
   date: Date,
   hour: number | number[],
   isAlreadyAdded: boolean,
 ) => {
-  const db = getFirestore(initializeApp(firebaseConfig));
+  const db = getFirestore(app);
   const dateRef = doc(db, 'ReservedDates', date.toDateString());
   if (typeof hour === 'number') {
     await setDoc(

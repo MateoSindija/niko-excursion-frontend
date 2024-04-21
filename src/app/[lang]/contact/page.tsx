@@ -5,6 +5,7 @@ import { getDictionary } from '@/app/[lang]/dictionaries';
 import InfoCard from '@/app/components/Cards/InfoCard';
 import ContactForm from '@/app/components/Forms/ContactForm';
 import GoogleMap from '@/app/components/Maps/GoogleMap';
+import { wait } from 'next/dist/lib/wait';
 
 const Page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   const { contact } = await getDictionary(lang);
@@ -14,6 +15,7 @@ const Page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
     'email',
     'hours',
   ];
+
   return (
     <SecondaryPagesContainer title={contact.title}>
       <>

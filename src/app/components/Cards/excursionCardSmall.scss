@@ -63,6 +63,13 @@
       margin-top: 5px;
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
+
+      &__container {
+        display: flex;
+        align-items: center;
+        margin-top: 3px;
+      }
 
       img {
         margin-right: 5px;

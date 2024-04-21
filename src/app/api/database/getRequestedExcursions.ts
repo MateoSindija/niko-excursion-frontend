@@ -1,8 +1,7 @@
-'use server';
-
 import {
   collection,
   doc,
+  DocumentSnapshot,
   endAt,
   getCountFromServer,
   getDoc,
@@ -13,23 +12,28 @@ import {
   query,
   startAfter,
   startAt,
+  where,
 } from '@firebase/firestore';
 import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '@/firebase/config';
+import app, { firebaseConfig } from '@/firebase/config';
 import { IExcursionRequest } from '@/interfaces/excursion.model';
+import { google } from 'google-gax/build/protos/compute_operations';
+import IError = google.cloud.compute.v1.IError;
 
 interface IParams {
   perPage?: number;
-  page?: number;
   requestId?: string;
+  lastDocId?: string;
 }
+
+const DOC_LIMIT = 10;
 
 const getRequestedExcursions = async ({
   requestId,
-  page,
   perPage,
+  lastDocId,
 }: IParams): Promise<IExcursionRequest[]> => {
-  const db = getFirestore(initializeApp(firebaseConfig));
+  const db = getFirestore(app);
   const collectionRef = collection(db, 'RequestedExcursion');
   if (requestId) {
     const docRef = doc(db, 'RequestedExcursion', requestId);
@@ -39,16 +43,28 @@ const getRequestedExcursions = async ({
       return [{ ...data, requestId: query.id }];
     }
     return [];
-  } else if (perPage != null && page != null) {
-    const start = (page - 1) * perPage;
-
+  } else {
+    let lastDocSnap: DocumentSnapshot | null = null;
+    if (lastDocId) {
+      lastDocSnap = await getDoc(doc(db, 'RequestedExcursion', lastDocId));
+    }
     const data = await getDocs(
-      query(
-        collectionRef,
-        orderBy('isApproved', 'desc'),
-        startAt(start),
-        limit(perPage),
-      ),
+      lastDocSnap
+        ? query(
+            collectionRef,
+            where('date', '>=', new Date(Date.now() - 24 * 60 * 60 * 1000)),
+            orderBy('date', 'asc'),
+            orderBy('isApproved', 'desc'),
+            startAfter(lastDocSnap),
+            limit(DOC_LIMIT),
+          )
+        : query(
+            collectionRef,
+            where('date', '>=', new Date(Date.now() - 24 * 60 * 60 * 1000)),
+            orderBy('date', 'asc'),
+            orderBy('isApproved', 'desc'),
+            limit(DOC_LIMIT),
+          ),
     );
 
     if (data.docs !== undefined) {

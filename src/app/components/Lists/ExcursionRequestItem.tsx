@@ -4,6 +4,9 @@ import formatDate from '@/app/utils/formatDate';
 import { IExcursionRequest } from '@/interfaces/excursion.model';
 import ConfirmModal from '@/app/components/Modals/ConfirmModal';
 import handleExcursionRequest from '@/app/api/database/handleExcursionRequest';
+import deleteRequestForExcursion from '@/app/api/database/deleteRequestForExcursion';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const ExcursionRequestItem = ({
   excursionTitle,
@@ -22,14 +25,23 @@ const ExcursionRequestItem = ({
 }: IExcursionRequest) => {
   const [isRefuseModalOpen, setIsRefuseModalOpen] = useState(false);
   const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
-
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const router = useRouter();
   const handleRefuseExcursion = async () => {
     await handleExcursionRequest(false, requestId, excursionId);
     setIsRefuseModalOpen(false);
+    router.refresh();
   };
   const handleConfirmExcursion = async () => {
     await handleExcursionRequest(true, requestId, excursionId);
     setIsConfirmModalOpen(false);
+    router.refresh();
+  };
+
+  const handleDeleteRequest = async () => {
+    await deleteRequestForExcursion(requestId);
+    setIsDeleteModalOpen(false);
+    router.refresh();
   };
 
   const handleClassName = () => {
@@ -69,10 +81,10 @@ const ExcursionRequestItem = ({
               <b>Ime:</b> {clientName}
             </div>
             <div>
-              <b>Broj:</b> {clientNumber}
+              <b>Broj:</b> <a href={`tel:${clientNumber}`}>{clientNumber}</a>
             </div>
             <div>
-              <b>Email:</b> {clientEmail}
+              <b>Email:</b> <a href={`mailto: ${clientEmail}`}>{clientEmail}</a>
             </div>
           </div>
         </div>
@@ -89,17 +101,25 @@ const ExcursionRequestItem = ({
       </div>
       <div className="requestItem__info__buttons">
         <button
-          onClick={() => setIsRefuseModalOpen(true)}
-          className="requestItem__info__buttons__refuse requestBtn"
+          onClick={() => setIsDeleteModalOpen(true)}
+          className="requestItem__info__buttons__delete requestBtn"
         >
-          Odbij
+          <Image src={'/trash.svg'} width={20} height={20} alt={'trash'} />
         </button>
-        <button
-          onClick={() => setIsConfirmModalOpen(true)}
-          className="requestItem__info__buttons__confirm requestBtn"
-        >
-          Odobri
-        </button>
+        <div className="requestItem__info__buttons__container">
+          <button
+            onClick={() => setIsRefuseModalOpen(true)}
+            className="requestItem__info__buttons__container__refuse requestBtn"
+          >
+            Odbij
+          </button>
+          <button
+            onClick={() => setIsConfirmModalOpen(true)}
+            className="requestItem__info__buttons__container__confirm requestBtn"
+          >
+            Odobri
+          </button>
+        </div>
       </div>
       {isRefuseModalOpen && (
         <ConfirmModal
@@ -107,6 +127,14 @@ const ExcursionRequestItem = ({
           isModalOpen={setIsRefuseModalOpen}
           confirm="Odbij"
           onConfirmFunction={handleRefuseExcursion}
+        />
+      )}
+      {isDeleteModalOpen && (
+        <ConfirmModal
+          title="Jeste li sigurni da želite izbrisati zahtjev za eskurziju?"
+          isModalOpen={setIsDeleteModalOpen}
+          confirm="Izbriši"
+          onConfirmFunction={handleDeleteRequest}
         />
       )}
       {isConfirmModalOpen && (

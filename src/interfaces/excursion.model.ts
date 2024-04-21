@@ -13,7 +13,7 @@ export interface IExcursion {
   titleImage: string;
   maxPersons: number;
   isExcursionPublic: boolean;
-  hours?: number[];
+  hours: number[];
 }
 
 export interface IExcursionRequest {

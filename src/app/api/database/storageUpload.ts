@@ -6,11 +6,9 @@ import {
   uploadBytesResumable,
 } from 'firebase/storage';
 import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '@/firebase/config';
+import app, { firebaseConfig } from '@/firebase/config';
 
-const app = initializeApp(firebaseConfig);
-
-const storage = getStorage();
+const storage = getStorage(app);
 
 export default async function imagesUpload(images: File[]): Promise<string[]> {
   let urlArray: string[] = [];
@@ -26,6 +24,7 @@ export default async function imagesUpload(images: File[]): Promise<string[]> {
           return (snap.bytesTransferred / snap.totalBytes) * 100;
         },
         (err) => {
+          console.log(err);
           reject(false);
         },
         async () => {

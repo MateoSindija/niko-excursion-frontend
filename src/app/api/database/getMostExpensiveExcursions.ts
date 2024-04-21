@@ -1,4 +1,3 @@
-'use server';
 import { IExcursion } from '@/interfaces/excursion.model';
 import {
   collection,
@@ -11,12 +10,12 @@ import {
   query,
 } from '@firebase/firestore';
 import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '@/firebase/config';
+import app, { firebaseConfig } from '@/firebase/config';
 
 const getMostExpensiveExcursions = async (
   amount: number = 3,
 ): Promise<IExcursion[] | []> => {
-  const db = getFirestore(initializeApp(firebaseConfig));
+  const db = getFirestore(app);
   const collectionRef = await collection(db, 'Excursion');
   const docs = await getDocs(
     query(collectionRef, orderBy('price', 'desc'), limit(amount)),

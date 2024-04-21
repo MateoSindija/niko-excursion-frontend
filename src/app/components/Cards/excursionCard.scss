@@ -36,6 +36,15 @@
         display: flex;
         align-items: center;
         margin-left: 10px;
+        margin-right: 10px;
+        span {
+          margin-left: 5px;
+        }
+      }
+      &__type {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
         span {
           margin-left: 5px;
         }

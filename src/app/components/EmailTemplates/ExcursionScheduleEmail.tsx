@@ -9,6 +9,7 @@ interface IProps {
   passengerNumber: number;
   phone: string;
   hour: number;
+  price: number;
 }
 
 const ExcursionScheduleEmail = ({
@@ -20,6 +21,7 @@ const ExcursionScheduleEmail = ({
   passengerNumber,
   phone,
   hour,
+  price,
 }: IProps) => {
   return (
     <div>
@@ -46,10 +48,14 @@ const ExcursionScheduleEmail = ({
           <h3>Email za kontakt:</h3> {email}
         </div>
         <div>
-          <h3>Broj mobitela za kontakt:</h3> {phone}
+          <h3>Broj mobitela za kontakt:</h3>{' '}
+          <a href={`tel: ${phone}`}>{phone}</a>
         </div>
         <div>
           <h3>Posebne napomene:</h3> {message}
+        </div>
+        <div>
+          <h3>Cijena</h3> {price + '€'}
         </div>
       </div>
     </div>

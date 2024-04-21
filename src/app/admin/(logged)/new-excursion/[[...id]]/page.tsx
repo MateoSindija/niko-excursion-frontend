@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { redirect } from 'next/navigation';
 import { getServerSession } from 'next-auth';
 import SignOutButton from '@/app/components/Buttons/SignOutButton';
@@ -6,7 +6,7 @@ import Link from 'next/link';
 import ExcursionForm from '@/app/components/Forms/ExcursionForm';
 import getExcursions from '@/app/api/database/getExcursions';
 import { IExcursion } from '@/interfaces/excursion.model';
-import AdminNavbar from '@/app/components/Navbar/AdminNavbar';
+import { AuthContext } from '@/app/utils/AuthProvider';
 
 const Page = async ({
   params,
@@ -15,15 +15,9 @@ const Page = async ({
     id: string[] | undefined;
   };
 }) => {
-  const session = await getServerSession();
   let excursion: IExcursion[] = [];
   if (params.id) {
     excursion = await getExcursions({ id: params.id[0] });
-  }
-
-  if (!session) {
-    redirect('/admin');
-    return null;
   }
 
   return (

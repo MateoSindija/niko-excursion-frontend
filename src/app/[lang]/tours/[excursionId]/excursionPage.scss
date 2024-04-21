@@ -16,6 +16,7 @@
     &__subHeader {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       font-size: 15px;
       color: $cool-grey;
       margin-bottom: 20px;
@@ -75,6 +76,7 @@
     flex-wrap: wrap;
   }
   &__title {
+    text-align: center;
     display: flex;
     justify-content: center;
     font-family: 'Playfair Display', sans-serif;

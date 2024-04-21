@@ -73,6 +73,7 @@ const AdminNavbar = () => {
             >
               Zahtjevi
             </Link>
+            <SignOutButton />
           </div>
         </>
       )}

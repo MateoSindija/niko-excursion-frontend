@@ -1,0 +1,11 @@
+.animatedLoading {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__animation {
+    width: 50%;
+    height: 300px;
+  }
+}

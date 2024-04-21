@@ -5,6 +5,7 @@ import { excursionReserveSchema } from '@/zod/excursionSchema';
 import z from 'zod';
 import ExcursionScheduleEmail from '@/app/components/EmailTemplates/ExcursionScheduleEmail';
 import { render } from '@react-email/render';
+import calculatePrice from '@/app/utils/calculatePrice';
 
 const resend = new Resend(process.env.RESEND_KEY);
 const sendExcursionScheduleEmail = async (
@@ -16,6 +17,7 @@ const sendExcursionScheduleEmail = async (
   excursionName: string,
   passengerNumber: number,
   hour: number,
+  price: number,
 ): Promise<boolean> => {
   const validatedFields = excursionReserveSchema.safeParse({
     email: email,
@@ -51,6 +53,7 @@ const sendExcursionScheduleEmail = async (
         passengerNumber={passengerNumber}
         phone={phone}
         hour={hour}
+        price={price}
       />,
       { pretty: true },
     ),

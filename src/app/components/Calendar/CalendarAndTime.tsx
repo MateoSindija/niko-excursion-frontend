@@ -6,10 +6,12 @@ import { date } from 'zod';
 import blockSelectedHours from '@/app/api/database/blockSelectedHours';
 import getBlockedHoursForDay from '@/app/api/database/getBlockedHoursForDay';
 import { useGetBlockedHours } from '@/hooks/useGetBlockedHours';
+import { getAuth, initializeAuth } from '@firebase/auth';
+import app, { auth, firebaseConfig } from '@/firebase/config';
+import firebase, { initializeApp } from 'firebase/app';
 
 const CalendarAndTime = () => {
-  const hours = Array.from({ length: 22 - 9 + 1 }, (_, index) => 9 + index);
-
+  const hours = Array.from({ length: 20 - 9 + 1 }, (_, index) => 9 + index);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedHours, setSelectedHours] = useState<number[]>([]);
 

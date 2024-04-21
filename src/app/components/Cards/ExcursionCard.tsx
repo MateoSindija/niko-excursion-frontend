@@ -24,6 +24,7 @@ const ExcursionCard = async ({ excursion, lang }: IProps) => {
     maxPersons,
     duration,
     price,
+    isExcursionPublic,
   } = excursion ?? {};
   const { excursionCard } = await getDictionary(lang);
 
@@ -72,6 +73,23 @@ const ExcursionCard = async ({ excursion, lang }: IProps) => {
               width={SVG_DIMENSION}
             />
             <span>{'Max: ' + maxPersons + ' ' + excursionCard.persons}</span>
+          </div>
+          <Image
+            src="/horizontal_line.svg"
+            alt={'line'}
+            height={SVG_DIMENSION}
+            width={SVG_LINE_WIDTH}
+          />
+          <div className="excursionCard__info__subHeader__persons">
+            <Image
+              src="/speed_boat.svg"
+              alt={'boat'}
+              height={SVG_DIMENSION + 5}
+              width={SVG_DIMENSION + 5}
+            />
+            <span>{`${excursionCard.type}: ${
+              isExcursionPublic ? excursionCard.public : excursionCard.private
+            }`}</span>
           </div>
         </div>
         <div className="excursionCard__info__desc">

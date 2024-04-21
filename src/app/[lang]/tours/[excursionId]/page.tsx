@@ -54,6 +54,24 @@ const Page = async ({
               />
               <Image src="/person.svg" width={18} height={18} alt="clock" />
               {`${excursionPage?.maxPerson} ${excursion?.maxPersons}`}
+              <Image
+                src="/horizontal_line.svg"
+                alt="line"
+                width={5}
+                height={18}
+                className="excursionPage__firstCol__subHeader__line"
+              />
+              <Image
+                src="/speed_boat.svg"
+                alt={'boat'}
+                height={20}
+                width={20}
+              />
+              {`${excursionPage.type}: ${
+                excursion.isExcursionPublic
+                  ? excursionPage.public
+                  : excursionPage.private
+              }`}
             </div>
             <ExcursionPhotosCarousel imagesUrl={excursion?.images ?? []} />
             <div className="excursionPage__firstCol__overview">

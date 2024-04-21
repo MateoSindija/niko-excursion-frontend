@@ -45,19 +45,37 @@
     justify-content: space-between;
 
     &__buttons {
-      margin: 25px 0 0 auto;
-      width: 200px;
       display: flex;
-      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 25px;
 
-      &__refuse {
+      &__delete {
+        width: 30px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: red;
         @include ripple-effect(red);
       }
 
-      &__confirm {
-        background-color: green;
-        @include ripple-effect(green);
+      &__container {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        width: 200px;
+        margin-left: auto;
+
+        &__refuse {
+          background-color: red;
+          @include ripple-effect(red);
+        }
+
+        &__confirm {
+          background-color: green;
+          @include ripple-effect(green);
+        }
       }
     }
 

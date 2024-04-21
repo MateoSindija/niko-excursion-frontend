@@ -1,4 +1,3 @@
-'use server';
 import {
   collection,
   doc,
@@ -11,9 +10,9 @@ import {
   where,
 } from '@firebase/firestore';
 import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '@/firebase/config';
+import app, { firebaseConfig } from '@/firebase/config';
 
-const db = getFirestore(initializeApp(firebaseConfig));
+const db = getFirestore(app);
 const getBlockedHoursInDay = async (date: Date) => {
   const docRef = doc(db, 'ReservedDates', date.toDateString());
   const document = await getDoc(docRef);
