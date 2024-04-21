@@ -2,8 +2,6 @@ import {
   collection,
   doc,
   DocumentSnapshot,
-  endAt,
-  getCountFromServer,
   getDoc,
   getDocs,
   getFirestore,
@@ -11,7 +9,6 @@ import {
   orderBy,
   query,
   startAfter,
-  startAt,
   where,
 } from '@firebase/firestore';
 import app, { firebaseConfig } from '@/firebase/config';

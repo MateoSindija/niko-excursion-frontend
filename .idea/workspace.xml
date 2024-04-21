@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Fixed photos and login key">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/(logged)/requested-excursions/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/(logged)/requested-excursions/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/addExcursionRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/addExcursionRequest.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/api/database/getRequestedExcursions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/getRequestedExcursions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/utils/authOptions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/authOptions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/firebase/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +170,7 @@
       <workItem from="1712831380223" duration="7122000" />
       <workItem from="1712994776349" duration="5763000" />
       <workItem from="1713427269563" duration="13526000" />
-      <workItem from="1713688127566" duration="9010000" />
+      <workItem from="1713688127566" duration="9737000" />
     </task>
     <task id="LOCAL−00001" summary="Fixed IExcursion not found error">
       <option name="closed" value="true" />
