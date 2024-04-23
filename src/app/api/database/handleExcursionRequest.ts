@@ -39,13 +39,23 @@ const handleExcursionRequest = async (
     hours.push(excursionsRequest.departureHour + i);
   }
   if (confirmed) {
-    await blockSelectedHours(excursionRequestDate, [...hours], false);
+    await blockSelectedHours(
+      excursionRequestDate,
+      [...hours],
+      false,
+      excursion.isExcursionPublic,
+    );
     await updateDoc(requestedExcursionRef, {
       isApproved: 'confirmed',
     });
   } else {
     if (excursionsRequest.isApproved === 'confirmed') {
-      await blockSelectedHours(excursionRequestDate, [...hours], true);
+      await blockSelectedHours(
+        excursionRequestDate,
+        [...hours],
+        true,
+        excursion.isExcursionPublic,
+      );
     }
     await updateDoc(requestedExcursionRef, {
       isApproved: 'refused',

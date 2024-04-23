@@ -24,6 +24,7 @@ export interface IExcursionRequest {
   isApproved: 'sent' | 'refused' | 'confirmed';
   passengerNumber: number;
   date: { seconds: number; nanoseconds: number };
+  deletionDate: { seconds: number; nanoseconds: number };
   excursionTitle: string;
   excursionId: string;
   requestId: string;

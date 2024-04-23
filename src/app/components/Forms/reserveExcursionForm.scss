@@ -1,4 +1,5 @@
 .reserveForm {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 35px 20px;
@@ -7,6 +8,19 @@
   width: 100%;
   box-sizing: border-box;
   background-color: white;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
 
   &__hours {
     display: flex;
@@ -97,5 +111,7 @@
   textarea {
     @include input;
     margin-bottom: 15px;
+    box-sizing: border-box;
+    width: 100% !important;
   }
 }

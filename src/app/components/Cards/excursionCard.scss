@@ -7,13 +7,18 @@
   background-color: white;
 
   &__info {
-    padding: 30px 30px 20px;
+    padding: 20px 30px;
     &__header {
+      text-decoration: none;
+      display: block;
       font-family: 'Playfair Display', sans-serif;
       font-size: toRem(35);
       font-weight: 500;
       color: black;
       margin-bottom: 10px;
+      &:hover {
+        color: $orange-color;
+      }
     }
 
     &__subHeader {

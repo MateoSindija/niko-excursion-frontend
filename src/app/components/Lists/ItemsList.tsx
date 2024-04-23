@@ -1,7 +1,12 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import ArrowIcon from '@/app/utils/vectors/ArrowIcon';
+import {
+  CSSTransition,
+  SwitchTransition,
+  TransitionGroup,
+} from 'react-transition-group';
 
 interface IProps {
   itemsList: [{ title: string; desc: string }];
@@ -10,6 +15,7 @@ interface IProps {
 const ItemsList = (props: IProps) => {
   const [activeItems, setActiveItems] = useState<number[] | undefined>([]);
   const { itemsList } = props;
+  const nodeRef = useRef<Array<null>>(new Array(itemsList.length).fill(null));
   const handleClick = (index: number) => {
     if (activeItems?.includes(index)) {
       setActiveItems(
@@ -23,7 +29,7 @@ const ItemsList = (props: IProps) => {
     <div className="itemList">
       {itemsList.map((item: { title: string; desc: string }, index: number) => {
         return (
-          <div key={index} className="itemList__item">
+          <div key={index} className={`itemList__item`}>
             <button
               className="itemList__item__header"
               onClick={() => handleClick(index)}
@@ -40,15 +46,31 @@ const ItemsList = (props: IProps) => {
                   {item.title}
                 </div>
               </div>
-              {activeItems?.includes(index) ? (
-                <ArrowIcon direction={'up'} color={'black'} />
-              ) : (
-                <ArrowIcon direction={'down'} color={'black'} />
-              )}
+              <CSSTransition
+                in={activeItems?.includes(index)}
+                timeout={10}
+                classNames="rotate"
+              >
+                <ArrowIcon
+                  direction={activeItems?.includes(index) ? 'up' : 'down'}
+                  color={'black'}
+                />
+              </CSSTransition>
             </button>
-            {activeItems?.includes(index) && (
-              <div className="itemList__item__desc">{item.desc}</div>
-            )}
+            <CSSTransition
+              in={activeItems?.includes(index)}
+              timeout={300}
+              unmountOnExit
+              classNames={'slide-down'}
+              nodeRef={nodeRef.current[index]}
+            >
+              <div
+                className="itemList__item__desc"
+                ref={nodeRef.current[index]}
+              >
+                {item.desc}
+              </div>
+            </CSSTransition>
           </div>
         );
       })}

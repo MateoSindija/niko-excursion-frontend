@@ -40,9 +40,12 @@ const ExcursionCard = async ({ excursion, lang }: IProps) => {
         />
       </div>
       <div className="excursionCard__info">
-        <div className="excursionCard__info__header">
+        <Link
+          href={`/${lang}/tours/${id}`}
+          className="excursionCard__info__header"
+        >
           {lang === 'hr' ? titleHr : titleEn}
-        </div>
+        </Link>
         <div className="excursionCard__info__subHeader">
           <div className="excursionCard__info__subHeader__duration">
             <Image

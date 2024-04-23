@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { Locale } from 'i18n.config';
 import LanguageButton from '@/app/components/Buttons/LanguageButton';
 import LinkList from '@/app/components/Navbar/LinkList';
@@ -29,6 +29,7 @@ const Navbar = ({ lang }: IProps) => {
   const windowLength = useDetectWindowSize();
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const dictionary = useContext(NavbarContext);
+  const refSlideDown = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,8 +81,14 @@ const Navbar = ({ lang }: IProps) => {
 
   return (
     <nav className="navbar">
-      {isNavbarVisible && (
-        <div className="navbar__contentSecond">
+      <CSSTransition
+        in={isNavbarVisible}
+        nodeRef={refSlideDown}
+        timeout={300}
+        unmountOnExit
+        classNames={'slide-down'}
+      >
+        <div className="navbar__contentSecond" ref={refSlideDown}>
           <div className="navbar__contentSecond__logo">
             <Logo />
           </div>
@@ -95,7 +102,7 @@ const Navbar = ({ lang }: IProps) => {
             />
           </div>
         </div>
-      )}
+      </CSSTransition>
       {windowLength > 0 && handleWhatNavToRender()}
     </nav>
   );

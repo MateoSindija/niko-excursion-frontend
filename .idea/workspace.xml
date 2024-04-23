@@ -4,9 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Centered Images in carousel">
+    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Fixed spacing between slides">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionsCarousel/excursionCarousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ExcursionsCarousel/excursionCarousel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/database/addExcursionRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/addExcursionRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/database/blockSelectedHours.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/blockSelectedHours.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/database/handleExcursionRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/handleExcursionRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Calendar/CalendarAndTime.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Calendar/CalendarAndTime.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/excursionCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/excursionCard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/excursionCardSmall.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/excursionCardSmall.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/ReserveExcursionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/ReserveExcursionForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/reserveExcursionForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/reserveExcursionForm.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Lists/ItemsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Lists/ItemsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Lists/itemsList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Lists/itemsList.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar/MobileNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar/MobileNavbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar/navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar/navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/utils/vectors/ArrowIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/vectors/ArrowIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/contact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/contact.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dictionaries/hr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/hr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/excursion.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/excursion.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/abstracts/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/abstracts/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +36,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="SCSS File" />
         <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -170,7 +189,10 @@
       <workItem from="1712831380223" duration="7122000" />
       <workItem from="1712994776349" duration="5763000" />
       <workItem from="1713427269563" duration="13526000" />
-      <workItem from="1713688127566" duration="11362000" />
+      <workItem from="1713688127566" duration="12610000" />
+      <workItem from="1713778397725" duration="3067000" />
+      <workItem from="1713781774675" duration="9512000" />
+      <workItem from="1713860742740" duration="7973000" />
     </task>
     <task id="LOCAL−00001" summary="Fixed IExcursion not found error">
       <option name="closed" value="true" />
@@ -221,7 +243,14 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1713702636985</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="Fixed spacing between slides">
+      <option name="closed" value="true" />
+      <created>1713703079755</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1713703079755</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +275,7 @@
     <MESSAGE value="Fixed excursion photo carousel and added carousel for front page" />
     <MESSAGE value="Fixed photos and login key" />
     <MESSAGE value="Centered Images in carousel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Centered Images in carousel" />
+    <MESSAGE value="Fixed spacing between slides" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed spacing between slides" />
   </component>
 </project>

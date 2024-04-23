@@ -15,6 +15,7 @@ import z, { boolean } from 'zod';
 import getExcursions from '@/app/api/database/getExcursions';
 import { IExcursion } from '@/interfaces/excursion.model';
 import calculatePrice from '@/app/utils/calculatePrice';
+import addDays from '@/app/utils/addDays';
 
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
@@ -62,6 +63,7 @@ export default async function addExcursionRequest(
       ),
       passengerNumber: validatedFields.data.passengers,
       date: validatedFields.data.date,
+      deletionDate: addDays(validatedFields.data.date, 2),
       optionalMessage: validatedFields.data.message,
       departureHour: validateHour.data,
       createdAt: new Date(),

@@ -1,20 +1,19 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import excursions from '@/app/components/Carousels/ExcursionsCarousel/ExcursionsCarousel';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { loginSchema } from '@/zod/loginSchema';
 import * as z from 'zod';
 import { excursionReserveSchema } from '@/zod/excursionSchema';
 import sendExcursionScheduleEmail from '@/app/api/resend/sendExcursionScheduleEmail';
 import { useGetBlockedHours } from '@/hooks/useGetBlockedHours';
 import HourButton from '@/app/components/Buttons/HourButton';
 import addExcursionRequest from '@/app/api/database/addExcursionRequest';
-import { da } from 'date-fns/locale';
 import calculatePrice from '@/app/utils/calculatePrice';
+import { ClipLoader } from 'react-spinners';
+import { wait } from 'next/dist/lib/wait';
 
 interface IProps {
   price: number;
@@ -55,10 +54,6 @@ const ReserveExcursionForm = (props: IProps) => {
     excursionStartingHours,
     id,
   } = props;
-  const workingHours = Array.from(
-    { length: 20 - 9 + 1 },
-    (_, index) => 9 + index,
-  );
 
   const [isEmailSent, setIsEmailSent] = useState(false);
   const [selectedDepartureHour, setSelectedDepartureHour] = useState<
@@ -78,7 +73,7 @@ const ReserveExcursionForm = (props: IProps) => {
     clearErrors,
     setError,
     getValues,
-    formState: { errors, isSubmitting, isDirty, isValid },
+    formState: { errors, isSubmitting },
   } = useForm<FormData>({
     resolver: zodResolver(excursionReserveSchema),
     defaultValues: {
@@ -90,6 +85,7 @@ const ReserveExcursionForm = (props: IProps) => {
   const { isLoading: isHoursLoading, blockedHours } = useGetBlockedHours(
     watch('date'),
   );
+
   const handleDisabled = () => {
     return isHoursLoading || isSubmitting;
   };
@@ -112,6 +108,7 @@ const ReserveExcursionForm = (props: IProps) => {
   useEffect(() => {
     setSelectedDepartureHour(undefined);
   }, [watch('date')]);
+
   const handleHourClick = (hour: number) => {
     clearErrors('root');
     setSelectedDepartureHour(hour);

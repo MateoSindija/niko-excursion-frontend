@@ -5,6 +5,8 @@
   &__item {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     &__header {
+      position: relative;
+      z-index: 2;
       background-color: white;
       display: flex;
       border: none;
@@ -30,6 +32,9 @@
     }
 
     &__desc {
+      position: relative;
+      z-index: 1;
+      padding: 10px 0;
       font-family: 'Playfair Display', sans-serif;
       color: $cool-grey;
       font-size: 15px;

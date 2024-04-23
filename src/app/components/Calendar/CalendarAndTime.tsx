@@ -34,10 +34,10 @@ const CalendarAndTime = () => {
       setSelectedHours((prevState) =>
         prevState.filter((stateHour) => stateHour !== hour),
       );
-      await blockSelectedHours(selectedDate, hour, true);
+      await blockSelectedHours(selectedDate, hour, true, false);
     } else {
       setSelectedHours((prevState) => [...prevState, hour]);
-      await blockSelectedHours(selectedDate, hour, false);
+      await blockSelectedHours(selectedDate, hour, false, false);
     }
   };
   return (
