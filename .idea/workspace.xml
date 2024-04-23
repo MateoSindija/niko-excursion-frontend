@@ -4,28 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Fixed spacing between slides">
+    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Added animations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/addExcursionRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/addExcursionRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/blockSelectedHours.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/blockSelectedHours.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/database/handleExcursionRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/database/handleExcursionRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Calendar/CalendarAndTime.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Calendar/CalendarAndTime.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/ExcursionCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/about-us/aboutUsPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/about-us/aboutUsPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/tours.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/tours.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Buttons/carouselControllerButton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Buttons/carouselControllerButton.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Cards/excursionCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/excursionCard.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Cards/excursionCardSmall.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/excursionCardSmall.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/ReserveExcursionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/ReserveExcursionForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/infoCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/infoCard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ReviewsCarousel/reviews.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ReviewsCarousel/reviews.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/contactForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/contactForm.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Forms/reserveExcursionForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/reserveExcursionForm.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Lists/ItemsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Lists/ItemsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Lists/itemsList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Lists/itemsList.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar/MobileNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar/MobileNavbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Navbar/navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar/navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/utils/vectors/ArrowIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/vectors/ArrowIcon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/contact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/contact.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dictionaries/hr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/hr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/excursion.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/excursion.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/abstracts/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/abstracts/_mixins.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/abstracts/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/abstracts/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +184,8 @@
       <workItem from="1713688127566" duration="12610000" />
       <workItem from="1713778397725" duration="3067000" />
       <workItem from="1713781774675" duration="9512000" />
-      <workItem from="1713860742740" duration="7973000" />
+      <workItem from="1713860742740" duration="8314000" />
+      <workItem from="1713875899745" duration="875000" />
     </task>
     <task id="LOCAL−00001" summary="Fixed IExcursion not found error">
       <option name="closed" value="true" />
@@ -250,7 +243,14 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1713703079755</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="Added animations">
+      <option name="closed" value="true" />
+      <created>1713875587802</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1713875587802</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +276,7 @@
     <MESSAGE value="Fixed photos and login key" />
     <MESSAGE value="Centered Images in carousel" />
     <MESSAGE value="Fixed spacing between slides" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed spacing between slides" />
+    <MESSAGE value="Added animations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added animations" />
   </component>
 </project>

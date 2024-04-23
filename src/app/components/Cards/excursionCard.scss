@@ -57,7 +57,7 @@
     }
 
     &__desc {
-      color: #7f8a99;
+      color: $roman-silver;
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 2; /* number of lines to show */
@@ -84,7 +84,7 @@
       }
       &__price {
         &__upper {
-          color: #7f8a99;
+          color: $roman-silver;
           text-transform: uppercase;
           text-align: right;
           font-size: 12px;
