@@ -1,15 +1,15 @@
-import React, { Suspense } from 'react';
+import React, { cache, Suspense } from 'react';
 import { Locale } from 'i18n.config';
 import { getDictionary } from '@/app/[lang]/dictionaries';
 import SecondaryPagesContainer from '@/app/components/Containers/SecondaryPagesContainer';
 import getExcursions from '@/app/api/database/getExcursions';
 import ExcursionCard from '@/app/components/Cards/ExcursionCard';
-
 import { wait } from 'next/dist/lib/wait';
 import ReactSwitch from 'react-switch';
 import ToggleButton from '@/app/components/Buttons/ToggleButton';
 import { redirect } from 'next/navigation';
 import Loading from '@/app/[lang]/loading';
+import getCachedExcursions from '@/app/utils/getCachedExcursions';
 
 const Page = async ({
   params: { lang },
@@ -22,9 +22,7 @@ const Page = async ({
 }) => {
   const { excursionsListText } = await getDictionary(lang);
   const searchIsPrivate = isPrivate === 'false';
-  const excursions = await getExcursions({
-    type: searchIsPrivate ? 'private' : 'public',
-  });
+  const excursions = await getCachedExcursions(searchIsPrivate);
 
   return (
     <SecondaryPagesContainer title={excursionsListText.title}>

@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Added animations">
+    <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Fixed some color names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/about-us/aboutUsPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/about-us/aboutUsPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/tours.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/tours.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Buttons/carouselControllerButton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Buttons/carouselControllerButton.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/excursionCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/excursionCard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/excursionCardSmall.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/excursionCardSmall.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/contact/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/[excursionId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[lang]/tours/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/tours/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Cards/InfoCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/InfoCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Cards/infoCard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Cards/infoCard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Carousels/ReviewsCarousel/reviews.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Carousels/ReviewsCarousel/reviews.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/contactForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/contactForm.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Forms/reserveExcursionForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Forms/reserveExcursionForm.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar/navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar/navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/abstracts/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/abstracts/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/abstracts/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/abstracts/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dictionaries/hr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/hr.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +26,8 @@
       <list>
         <option value="CSS File" />
         <option value="TypeScript JSX File" />
-        <option value="TypeScript File" />
         <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -185,7 +182,8 @@
       <workItem from="1713778397725" duration="3067000" />
       <workItem from="1713781774675" duration="9512000" />
       <workItem from="1713860742740" duration="8314000" />
-      <workItem from="1713875899745" duration="875000" />
+      <workItem from="1713875899745" duration="2075000" />
+      <workItem from="1713949957986" duration="9407000" />
     </task>
     <task id="LOCAL−00001" summary="Fixed IExcursion not found error">
       <option name="closed" value="true" />
@@ -250,7 +248,14 @@
       <option name="presentableId" value="LOCAL−00009" />
       <updated>1713875587802</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL−00010" summary="Fixed some color names">
+      <option name="closed" value="true" />
+      <created>1713877333770</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1713877333770</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +282,7 @@
     <MESSAGE value="Centered Images in carousel" />
     <MESSAGE value="Fixed spacing between slides" />
     <MESSAGE value="Added animations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added animations" />
+    <MESSAGE value="Fixed some color names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some color names" />
   </component>
 </project>

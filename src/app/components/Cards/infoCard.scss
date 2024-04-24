@@ -28,5 +28,10 @@
     color: $cool-grey;
     margin: 15px 0;
     text-align: center;
+
+    a {
+      color: $cool-grey !important;
+      text-underline: none !important;
+    }
   }
 }

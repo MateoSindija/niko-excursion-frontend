@@ -33,11 +33,18 @@ const Footer = async ({ lang, footerDictionary }: IProps) => {
         </div>
         <div className="footer__col__row">
           <PhoneIcon />
-          <span className="footer__col__row__text">{PHONE_NUMBER}</span>
+          <a
+            className="footer__col__row__text"
+            href={`https://wa.me/${PHONE_NUMBER.replace(/[+\s]/g, '')}`}
+          >
+            {PHONE_NUMBER}
+          </a>
         </div>
         <div className="footer__col__row">
           <MailIcon />
-          <span className="footer__col__row__text">{EMAIL}</span>
+          <a className="footer__col__row__text" href={`mailto: ${EMAIL}`}>
+            {EMAIL}
+          </a>
         </div>
         <div className="footer__col__row">
           <SocialMediaButton

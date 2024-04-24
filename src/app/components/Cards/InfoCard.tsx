@@ -78,13 +78,26 @@ const InfoCard = async ({ type, text }: IProps) => {
   const handleInfo = () => {
     switch (type) {
       case 'address':
-        return LOCATION;
+        return <div className="infoContainer__info">{LOCATION}</div>;
       case 'phone':
-        return text.info.callUs + PHONE_NUMBER;
+        return (
+          <div className="infoContainer__info">
+            {text.info.callUs + ' '}
+            <a href={`https://wa.me/${PHONE_NUMBER.replace(/[+\s]/g, '')}`}>
+              {PHONE_NUMBER}
+            </a>
+          </div>
+        );
       case 'hours':
-        return text.info.openFromTo;
+        return (
+          <div className="infoContainer__info">{text.info.openFromTo}</div>
+        );
       case 'email':
-        return EMAIL;
+        return (
+          <a className="infoContainer__info" href={`mailto: ${EMAIL}`}>
+            {EMAIL}
+          </a>
+        );
     }
   };
   return (
@@ -94,7 +107,7 @@ const InfoCard = async ({ type, text }: IProps) => {
         <h4 className="infoContainer__header__title">{handleTitle()}</h4>
       </div>
       <Image src={'/horizontal_line.svg'} alt="line" height={30} width={10} />
-      <div className="infoContainer__info">{handleInfo()}</div>
+      {handleInfo()}
     </div>
   );
 };

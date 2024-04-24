@@ -11,6 +11,43 @@ import ReserveExcursionForm from '@/app/components/Forms/ReserveExcursionForm';
 import { IExcursion } from '@/interfaces/excursion.model';
 import getDocumentsWithoutGivenId from '@/app/api/database/getDocumentsWithoutGivenId';
 import ExcursionCardSmall from '@/app/components/Cards/ExcursionCardSmall';
+import { Metadata } from 'next';
+import { cache } from 'react';
+import getCachedExcursions from '@/app/utils/getCachedExcursions';
+
+const getExcursion = cache(async (excursionId: string) => {
+  const excursionArray = await getExcursions({ id: excursionId });
+  return excursionArray[0];
+});
+
+export async function generateStaticParams() {
+  const excursions = await getCachedExcursions(true);
+
+  return excursions.map((excursion) => excursion.id);
+}
+export async function generateMetadata({
+  params,
+}: {
+  params: {
+    excursionId: string;
+    lang: Locale;
+  };
+}): Promise<Metadata> {
+  const { excursionId, lang } = params;
+  const excursion: IExcursion | [] = await getExcursion(excursionId);
+  return {
+    title: lang === 'hr' ? excursion.titleHr : excursion.titleEn,
+    description:
+      lang === 'hr' ? excursion.descriptionCro : excursion.descriptionEng,
+    openGraph: {
+      images: [
+        {
+          url: excursion.titleImage,
+        },
+      ],
+    },
+  };
+}
 
 const Page = async ({
   params,
@@ -22,10 +59,9 @@ const Page = async ({
 }) => {
   const { excursionId, lang } = params;
   const { excursionPage } = await getDictionary(lang);
-  const excursionArray = await getExcursions({ id: excursionId });
   const excursionArrayWithoutCurrent =
     await getDocumentsWithoutGivenId(excursionId);
-  const excursion: IExcursion | [] = excursionArray[0];
+  const excursion: IExcursion | [] = await getExcursion(excursionId);
 
   return (
     <>
