@@ -17,7 +17,7 @@
     }
   ],
   "reviewCarouselText": {
-    "buttonTxt": "Sve Eskurzije"
+    "buttonTxt": "Sve Ekskurzija"
   },
   "frontPageContainers": {
     "galleryTitle": "Galerija Slika",
@@ -58,12 +58,12 @@
     "type": "Vrsta:"
   },
   "excursionPage": {
-    "title": "Rezervirajte svoju eskurziju",
+    "title": "Rezervirajte svoju ekskurziju",
     "duration": "Trajanje:",
-    "overview": "Pregled eskurzije",
+    "overview": "Pregled ekskurzije",
     "included": "Uključeno u vaš put",
     "maxPerson": "Max Osoba:",
-    "other": "Slične Eskurzije",
+    "other": "Slične Ekskurzije",
     "type": "Vrsta",
     "public": "Javna",
     "private": "Privatna",
@@ -79,9 +79,9 @@
     ],
     "bookTour": {
       "totalPrice": "Ukupna Cijena",
-      "pricePrivate": "Cijena eskurzije",
+      "pricePrivate": "Cijena ekskurzije",
       "pricePublic": "Cijena po osobi",
-      "title": "Rezervirajte svoju eskurziju",
+      "title": "Rezervirajte svoju ekskurziju",
       "name": "Vaše ime",
       "phone": "Vaš broj mobitela",
       "email": "Vaš email",

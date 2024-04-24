@@ -217,10 +217,10 @@ const ExcursionForm = (excursion: IExcursion | null) => {
         onSubmit={handleSubmit(addExcursion)}
         className="newExcursionForm__form"
       >
-        <h1 className="newExcursionForm__form__title">Nova eskurzija</h1>
+        <h1 className="newExcursionForm__form__title">Nova ekskurzija</h1>
         <div className="newExcursionForm__form__multipleInputs">
           <div className="newExcursionForm__form__inputContainer">
-            <label htmlFor="titleHr">Naziv eskurzije na Hrvatskom</label>
+            <label htmlFor="titleHr">Naziv ekskurzija na Hrvatskom</label>
             <input
               type="text"
               id="titleHr"
@@ -235,7 +235,7 @@ const ExcursionForm = (excursion: IExcursion | null) => {
             )}
           </div>{' '}
           <div className="newExcursionForm__form__inputContainer">
-            <label htmlFor="titleEn">Naziv eskurzije na Engleskom</label>
+            <label htmlFor="titleEn">Naziv ekskurzija na Engleskom</label>
             <input
               type="text"
               id="titleEn"
@@ -299,7 +299,7 @@ const ExcursionForm = (excursion: IExcursion | null) => {
           </div>
         </div>
         <div className="newExcursionForm__form__inputContainer">
-          <label htmlFor="descHr">Opis eskurzije na hrvatskom</label>
+          <label htmlFor="descHr">Opis ekskurzije na hrvatskom</label>
           <textarea
             id="descHr"
             {...register('descCro')}
@@ -313,7 +313,7 @@ const ExcursionForm = (excursion: IExcursion | null) => {
           )}
         </div>
         <div className="newExcursionForm__form__inputContainer">
-          <label htmlFor="descEn">Opis eskurzije na engleskom</label>
+          <label htmlFor="descEn">Opis ekskurzije na engleskom</label>
           <textarea
             id="descEn"
             {...register('descEng')}
@@ -327,7 +327,7 @@ const ExcursionForm = (excursion: IExcursion | null) => {
           )}
         </div>
         <div className="newExcursionForm__form__checkboxContainer">
-          <label htmlFor="isPrivate">Je li eskurzija javna</label>
+          <label htmlFor="isPrivate">Je li ekskurzija javna</label>
           <input
             id="isPrivate"
             type={'checkbox'}
@@ -477,7 +477,7 @@ const ExcursionForm = (excursion: IExcursion | null) => {
           ) : excursion?.titleHr ? (
             'Spremi promjene'
           ) : (
-            'Dodaj eskurziju'
+            'Dodaj ekskurziju'
           )}
         </button>
 
@@ -491,7 +491,7 @@ const ExcursionForm = (excursion: IExcursion | null) => {
           <div>
             {excursion?.id
               ? 'Promjene su uspješno spremeljene'
-              : 'Eskurzija je uspješno dodana'}
+              : 'Ekskurzija je uspješno dodana'}
           </div>
         )}
         {excursionStatus.error && <div>Nešto je pošlo po krivu</div>}

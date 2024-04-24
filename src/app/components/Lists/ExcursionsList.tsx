@@ -47,7 +47,7 @@ const ExcursionItem = ({ id, createdAt, titleHr, duration }: IExcursion) => {
       </div>
       {isDeleteModalOpen && (
         <ConfirmModal
-          title="Jeste li sigurni da želite obrisati eskurziju?"
+          title="Jeste li sigurni da želite obrisati ekskurzija?"
           isModalOpen={setIsDeleteModalOpen}
           onConfirmFunction={handleDeleteExcursion}
         />
@@ -60,7 +60,7 @@ const ExcursionsList = ({ excursions }: IExcursionsListProps) => {
   return (
     <div className="excursionList">
       <div className="excursionList__header">
-        <h4 className="excursionList__header__title">Naziv Eskurzije</h4>
+        <h4 className="excursionList__header__title">Naziv Ekskurzije</h4>
         <h4 className="excursionList__header__duration">Trajanje</h4>
         <h4 className="excursionList__header__created">Datum stvaranja</h4>
         <h4 className="excursionList__header__control">Upravljanje</h4>

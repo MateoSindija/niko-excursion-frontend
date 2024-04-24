@@ -42,7 +42,7 @@ const sendExcursionScheduleEmail = async (
   const { data, error } = await resend.emails.send({
     from: 'onboarding@resend.dev',
     to: EMAIL,
-    subject: `Upit za rezervaciju eskurzije ${excursionName} od ${name}`,
+    subject: `Upit za rezervaciju ekskurzija ${excursionName} od ${name}`,
     html: render(
       <ExcursionScheduleEmail
         name={name}

@@ -59,7 +59,7 @@ const ExcursionRequestItem = ({
     <div className={`requestItem ${handleClassName()}`}>
       <div className="requestItem__info">
         <div className="requestItem__info__col lg">
-          <h3 className="requestItem__info__col__title">Eskurzija</h3>
+          <h3 className="requestItem__info__col__title">Ekskurzija</h3>
           <div className="requestItem__info__col__content">
             <div>{excursionTitle}</div>
             <div>
@@ -123,7 +123,7 @@ const ExcursionRequestItem = ({
       </div>
       {isRefuseModalOpen && (
         <ConfirmModal
-          title="Jeste li sigurni da želite odbiti eskurziju?"
+          title="Jeste li sigurni da želite odbiti ekskurziju?"
           isModalOpen={setIsRefuseModalOpen}
           confirm="Odbij"
           onConfirmFunction={handleRefuseExcursion}
@@ -131,7 +131,7 @@ const ExcursionRequestItem = ({
       )}
       {isDeleteModalOpen && (
         <ConfirmModal
-          title="Jeste li sigurni da želite izbrisati zahtjev za eskurziju?"
+          title="Jeste li sigurni da želite izbrisati zahtjev za ekskurziju?"
           isModalOpen={setIsDeleteModalOpen}
           confirm="Izbriši"
           onConfirmFunction={handleDeleteRequest}
@@ -139,7 +139,7 @@ const ExcursionRequestItem = ({
       )}
       {isConfirmModalOpen && (
         <ConfirmModal
-          title="Jeste li sigurni da želite potvrditi eskurziju?"
+          title="Jeste li sigurni da želite potvrditi ekskurziju?"
           isModalOpen={setIsConfirmModalOpen}
           confirm="Potvrdi"
           onConfirmFunction={handleConfirmExcursion}

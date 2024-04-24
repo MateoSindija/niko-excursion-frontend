@@ -18,12 +18,12 @@ export const excursionSchema = z.object({
     .max(100, { message: 'Naziv mora imati max 100 znakova' }),
   duration: z.coerce
     .number()
-    .min(1, { message: 'Eskurzija mora trajati barem 1 sat' })
-    .max(10, { message: 'Eskurzija može trajati max 10 sati ' }),
+    .min(1, { message: 'Ekskurzija mora trajati barem 1 sat' })
+    .max(10, { message: 'Ekskurzija može trajati max 10 sati ' }),
   price: z.coerce
     .number()
-    .min(1, { message: 'Eskurzija mora koštati minumum 1€' })
-    .max(10000, { message: 'Eskurzija može koštati najviše max 1000€' }),
+    .min(1, { message: 'Ekskurzija mora koštati minumum 1€' })
+    .max(10000, { message: 'Ekskurzija može koštati najviše max 1000€' }),
   maxPersons: z.coerce
     .number()
     .min(1, { message: 'Minimum broj dozvoljenih osoba mora biti barem 1' })

@@ -24,9 +24,9 @@ const AdminNavbar = () => {
     <nav className="adminNavbarDesktop">
       <div className="adminNavbarDesktop__links">
         <Logo />
-        <Link href={'/admin/new-excursion'}>Nova eskurzija</Link>
+        <Link href={'/admin/new-excursion'}>Nova ekskurzija</Link>
         <Link href={'/admin/calendar'}>Kalendar</Link>
-        <Link href={'/admin/excursions'}>Eskurzije</Link>
+        <Link href={'/admin/excursions'}>Ekskurzije</Link>
         <Link href={'/admin/requested-excursions'}>Zahtjevi</Link>
       </div>
       <SignOutButton />
@@ -53,7 +53,7 @@ const AdminNavbar = () => {
               href={'/admin/new-excursion'}
               onClick={() => setIsSidebarVisible(false)}
             >
-              Nova eskurzija
+              Nova ekskurzija
             </Link>
             <Link
               href={'/admin/calendar'}
@@ -65,7 +65,7 @@ const AdminNavbar = () => {
               href={'/admin/excursions'}
               onClick={() => setIsSidebarVisible(false)}
             >
-              Eskurzije
+              Ekskurzije
             </Link>
             <Link
               href={'/admin/requested-excursions'}
