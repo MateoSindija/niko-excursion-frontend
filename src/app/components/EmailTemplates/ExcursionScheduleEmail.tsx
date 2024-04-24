@@ -25,7 +25,7 @@ const ExcursionScheduleEmail = ({
 }: IProps) => {
   return (
     <div>
-      <h2>Upit za rezervaciju ekskurzija od {name}</h2>
+      <h2>Upit za rezervaciju ekskurzije od {name}</h2>
       <div>
         <div>
           <h3>Datum željene rezervacije:</h3>{' '}

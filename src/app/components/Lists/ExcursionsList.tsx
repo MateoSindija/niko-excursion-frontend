@@ -47,7 +47,7 @@ const ExcursionItem = ({ id, createdAt, titleHr, duration }: IExcursion) => {
       </div>
       {isDeleteModalOpen && (
         <ConfirmModal
-          title="Jeste li sigurni da želite obrisati ekskurzija?"
+          title="Jeste li sigurni da želite obrisati ekskurziju?"
           isModalOpen={setIsDeleteModalOpen}
           onConfirmFunction={handleDeleteExcursion}
         />
