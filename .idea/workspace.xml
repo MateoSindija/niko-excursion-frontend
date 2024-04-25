@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dae648bb-d469-49cd-8183-a2dadc95380a" name="Changes" comment="Fixed some color names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[lang]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[lang]/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/resend/sendExcursionScheduleEmail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/resend/sendExcursionScheduleEmail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/EmailTemplates/ExcursionScheduleEmail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/EmailTemplates/ExcursionScheduleEmail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Lists/ExcursionsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Lists/ExcursionsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dictionaries/hr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionaries/hr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/sitemap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sitemap.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +77,8 @@
       <recent name="D:\Niko excursion\niko-excursion-frontend\public\info" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Niko excursion\niko-excursion-frontend\public\gallery" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\public" />
+      <recent name="D:\Niko excursion\niko-excursion-frontend\public\gallery" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\src" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\[lang]" />
       <recent name="D:\Niko excursion\niko-excursion-frontend\src\app\components" />
@@ -179,7 +175,8 @@
       <workItem from="1713781774675" duration="9512000" />
       <workItem from="1713860742740" duration="8314000" />
       <workItem from="1713875899745" duration="2075000" />
-      <workItem from="1713949957986" duration="11546000" />
+      <workItem from="1713949957986" duration="12408000" />
+      <workItem from="1714036013960" duration="345000" />
     </task>
     <task id="LOCAL−00001" summary="Fixed IExcursion not found error">
       <option name="closed" value="true" />
